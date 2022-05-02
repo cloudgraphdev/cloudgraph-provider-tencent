@@ -1,15 +1,15 @@
 {
-  "name": "@cloudgraph/cg-provider-gcp",
+  "name": "@cloudgraph/cg-provider-tencent",
   "version": "0.0.0",
-  "description": "CloudGraph provider plugin for GCP used to fetch GCP cloud data.",
+  "description": "CloudGraph provider plugin for Tencent Cloud used to fetch Tencent Cloud data.",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/",
     "tag": "latest",
     "access": "public"
   },
   "homepage": "https://www.cloudgraph.dev/",
-  "repository": "github:cloudgraphdev/cloudgraph-provider-gcp",
-  "bugs": "https://github.com/cloudgraphdev/cloudgraph-provider-gcp/issues",
+  "repository": "github:cloudgraphdev/cloudgraph-provider-tencent",
+  "bugs": "https://github.com/cloudgraphdev/cloudgraph-provider-tencent/issues",
   "main": "dist/services/index.js",
   "types": "dist/services/index.d.ts",
   "author": "AutoCloud",
@@ -32,21 +32,21 @@
     "terraform:cleanup": "rimraf ./tests/terraform/{.terraform,.terraform.lock.hcl,tfplan} ./tests/terraform/*.{tfstate,tfplan,backup}"
   },
   "dependencies": {
-    "@cloudgraph/sdk": "^0.3.4",
+    "@cloudgraph/sdk": "^0.18.1",
     "@graphql-tools/load-files": "^6.3.2",
     "@graphql-tools/merge": "^8.0.1",
     "@sentry/node": "^6.7.2",
     "chalk": "^4.1.2",
     "dotenv": "^10.0.0",
-    "graphql": "^15.5.1",
+    "graphql": "^16.2.0",
     "lodash": "^4.17.21",
     "pino": "^6.11.3",
     "typescript": "^4.3.5"
   },
   "devDependencies": {
     "@autocloud/eslint-config": "^0.1.0",
-    "@graphql-codegen/cli": "1.21.7",
-    "@graphql-codegen/typescript": "1.23.0",
+    "@graphql-codegen/cli": "2.4.0",
+    "@graphql-codegen/typescript": "2.4.2",
     "@semantic-release/changelog": "^5.0.1",
     "@semantic-release/git": "^9.0.0",
     "@semantic-release/gitlab": "^6.2.2",
