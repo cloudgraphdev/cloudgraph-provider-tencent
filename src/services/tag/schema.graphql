@@ -1,0 +1,17 @@
+type tencentTag implements tencentBaseService @key(fields: "id") {
+  key: String! @search(by: [hash, regexp])
+  value: String! @search(by: [hash, regexp])
+  subnets: [tencentSubnet]
+  vpcInstances: [tencentVpc]
+}
+
+type tencentRawTag
+  @generate(
+    query: { get: false, query: false, aggregate: false }
+    mutation: { add: false, delete: false }
+    subscription: false
+  ) {
+  id: String! @id
+  key: String
+  value: String
+}

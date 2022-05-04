@@ -1,0 +1,18 @@
+type tencentSubnet implements tencentBaseService @key(fields: "id") {
+  name: String @search(by: [hash, regexp])
+  cidrBlock: String @search(by: [hash, regexp])
+  isDefault: Boolean @search
+  enableBroadcast: Boolean @search
+  zone: String @search(by: [hash, regexp])
+  routeTableId: String @search(by: [hash, regexp])
+  createdTime: String @search(by: [hash, regexp])
+  availableIpAddressCount: Int @search
+  ipv6CidrBlock: String @search(by: [hash, regexp])
+  networkAclId: String @search(by: [hash, regexp])
+  isRemoteVpcSnat: Boolean @search
+  totalIpAddressCount: Int @search
+  tags: [tencentRawTag]
+  cdcId: String @search(by: [hash, regexp])
+  isCdcSubnet: Int @search
+  vpcInstances: [tencentVpc] @hasInverse(field: subnets)
+}

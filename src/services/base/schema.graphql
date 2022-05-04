@@ -1,0 +1,21 @@
+interface tencentBaseService 
+  @generate(
+    query: { get: true, query: true, aggregate: true }
+    mutation: { add: true, delete: false }
+    subscription: false
+  ) {
+    id: String! @id @search(by: [hash])
+    region: String @search(by: [hash, regexp])
+}
+
+type tencentKeyValue
+  @generate(
+    query: { get: true, query: true, aggregate: true }
+    mutation: { add: true, delete: false }
+    subscription: false
+  ) 
+  @key(fields: "id") {
+    id: String! @id @search(by: [hash])
+    key: String! @search(by: [hash, regexp])
+    value: String @search(by: [hash, regexp])
+}
