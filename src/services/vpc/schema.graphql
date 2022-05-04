@@ -1,0 +1,29 @@
+type tencentVpc implements tencentBaseService @key(fields: "id") {
+  name: String @search(by: [hash, regexp])
+  cidrBlock: String @search(by: [hash, regexp])
+  isDefault: Boolean @search
+  enableMulticast: Boolean @search
+  createdTime: String @search(by: [hash, regexp])
+  dnsServerSet: [String] @search(by: [hash, regexp])
+  domainName: String @search(by: [hash, regexp])
+  dhcpOptionsId: String @search(by: [hash, regexp])
+  enableDhcp: Boolean @search
+  ipv6CidrBlock: String @search(by: [hash, regexp])
+  tags: [tencentRawTag]
+  assistantCidrSet: [tencentVpcAssistantCidr]
+  subnets: [tencentSubnet] @hasInverse(field: vpcInstances)
+}
+
+type tencentVpcAssistantCidr
+  @generate(
+    query: { get: false, query: true, aggregate: false }
+    mutation: { add: false, delete: false }
+    subscription: false
+  )
+  @key(fields: "id") {
+  id: String! @id @search(by: [hash, regexp])
+  vpcId: String @search(by: [hash, regexp])
+  cidrBlock: String @search(by: [hash, regexp])
+  assistantType: Int @search
+  subnetSet: [tencentSubnet]
+}
