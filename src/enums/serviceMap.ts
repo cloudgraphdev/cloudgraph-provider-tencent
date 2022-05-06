@@ -4,6 +4,7 @@ import TencentSecurityGroup from '../services/securityGroup'
 import TencentSecurityGroupRule from '../services/securityGroupRule'
 import TencentCcn from '../services/ccn'
 import TencentCcnAttachment from '../services/ccnAttachment'
+import TencentKubernetesEngine from '../services/kubernetesEngine'
 import TencentSubnet from '../services/subnet'
 import TencentVpc from '../services/vpc'
 import TencentTag from '../services/tag'
@@ -29,6 +30,7 @@ export default {
   [services.routeTable]: TencentRouteTable,
   [services.securityGroup]: TencentSecurityGroup,
   [services.securityGroupRule]: TencentSecurityGroupRule,
+  [services.kubernetesEngine]: TencentKubernetesEngine,
   [services.subnet]: TencentSubnet,
   [services.vpc]: TencentVpc,
   [services.vpnConnection]: TencentVpnConnection,

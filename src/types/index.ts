@@ -28,4 +28,5 @@ export interface rawDataInterface {
   data: any
   subnets?: string[]
   TagSet?: Tag[]
+  subnet?: string[]
 }

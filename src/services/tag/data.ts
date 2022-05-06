@@ -8,7 +8,7 @@ import { TencentTag } from '../../types/generated'
 
 const lt = { ...tencentLoggerText }
 const { logger } = CloudGraph
-export const serviceName = 'Tag'
+const serviceName = 'Tag'
 
 export interface RawTencentTag extends TencentTag {
   id: string

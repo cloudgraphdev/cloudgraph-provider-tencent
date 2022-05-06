@@ -13,6 +13,7 @@ export default {
   [services.routeTable]: 'tencentRouteTable',
   [services.securityGroup]: 'tencentSecurityGroup',
   [services.securityGroupRule]: 'tencentSecurityGroupRule',
+  [services.kubernetesEngine]: 'tencentKubernetesCluster',
   [services.subnet]: 'tencentSubnet',
   [services.vpc]: 'tencentVpc',
   [services.vpnConnection]: 'tencentVpnConnection',
