@@ -60,6 +60,7 @@ export type TencentSubnet = TencentBaseService & {
 
 export type TencentTag = TencentBaseService & {
   key: Scalars['String'];
+  securityGroups?: Maybe<Array<Maybe<TencentSecurityGroup>>>;
   subnets?: Maybe<Array<Maybe<TencentSubnet>>>;
   value: Scalars['String'];
   vpcInstances?: Maybe<Array<Maybe<TencentVpc>>>;
