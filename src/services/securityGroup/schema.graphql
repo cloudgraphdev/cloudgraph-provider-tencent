@@ -1,0 +1,9 @@
+type tencentSecurityGroup implements tencentBaseService @key(fields: "id") {
+  name: String @search(by: [hash, regexp])
+  securityGroupDesc: String @search(by: [hash, regexp])
+  projectId: String @search(by: [hash, regexp])
+  isDefault: Boolean @search
+  createdTime: String @search(by: [hash, regexp])
+  tags: [tencentRawTag]
+  updateTime: String @search(by: [hash, regexp])
+}
