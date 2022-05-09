@@ -22,6 +22,7 @@ export default {
   [services.securityGroupRule]: TencentSecurityGroupRule,
   [services.ccn]: TencentCcn,
   [services.ccnAttachment]: TencentCcnAttachment,
+  [services.securityGroup]: TencentSecurityGroup,
   [services.subnet]: TencentSubnet,
   [services.vpc]: TencentVpc,
   [services.vpnGateway]: TencentVpnGateway,
