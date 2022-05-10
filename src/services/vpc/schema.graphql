@@ -12,6 +12,7 @@ type tencentVpc implements tencentBaseService @key(fields: "id") {
   tags: [tencentRawTag]
   assistantCidrSet: [tencentVpcAssistantCidr]
   subnets: [tencentSubnet] @hasInverse(field: vpcInstances)
+  routeTables: [tencentRouteTable] @hasInverse(field: vpcInstances)
 }
 
 type tencentVpcAssistantCidr
