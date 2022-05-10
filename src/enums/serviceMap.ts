@@ -1,4 +1,5 @@
 import services from './services'
+import TencentSecurityGroup from '../services/securityGroup'
 import TencentSubnet from '../services/subnet'
 import TencentVpc from '../services/vpc'
 import TencentTag from '../services/tag'
@@ -8,6 +9,7 @@ import TencentTag from '../services/tag'
  * serviceMap is used by the serviceFactory to produce instances of service classes
  */
 export default {
+  [services.securityGroup]: TencentSecurityGroup,
   [services.subnet]: TencentSubnet,
   [services.vpc]: TencentVpc,
   tag: TencentTag,

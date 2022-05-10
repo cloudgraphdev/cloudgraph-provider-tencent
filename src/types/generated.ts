@@ -29,6 +29,16 @@ export type TencentRawTag = {
   value?: Maybe<Scalars['String']>;
 };
 
+export type TencentSecurityGroup = TencentBaseService & {
+  createdTime?: Maybe<Scalars['String']>;
+  isDefault?: Maybe<Scalars['Boolean']>;
+  name?: Maybe<Scalars['String']>;
+  projectId?: Maybe<Scalars['String']>;
+  securityGroupDesc?: Maybe<Scalars['String']>;
+  tags?: Maybe<Array<Maybe<TencentRawTag>>>;
+  updateTime?: Maybe<Scalars['String']>;
+};
+
 export type TencentSubnet = TencentBaseService & {
   availableIpAddressCount?: Maybe<Scalars['Int']>;
   cdcId?: Maybe<Scalars['String']>;
@@ -50,6 +60,7 @@ export type TencentSubnet = TencentBaseService & {
 
 export type TencentTag = TencentBaseService & {
   key: Scalars['String'];
+  securityGroups?: Maybe<Array<Maybe<TencentSecurityGroup>>>;
   subnets?: Maybe<Array<Maybe<TencentSubnet>>>;
   value: Scalars['String'];
   vpcInstances?: Maybe<Array<Maybe<TencentVpc>>>;

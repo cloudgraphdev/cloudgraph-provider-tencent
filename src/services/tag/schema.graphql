@@ -3,6 +3,7 @@ type tencentTag implements tencentBaseService @key(fields: "id") {
   value: String! @search(by: [hash, regexp])
   subnets: [tencentSubnet]
   vpcInstances: [tencentVpc]
+  securityGroups: [tencentSecurityGroup]
 }
 
 type tencentRawTag
