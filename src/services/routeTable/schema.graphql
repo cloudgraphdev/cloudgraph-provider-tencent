@@ -54,4 +54,5 @@ type tencentRouteTable implements tencentBaseService @key(fields: "id") {
   tags: [tencentRawTag]
   localCidrForCcn: [tencentRouteTableLocalCidrForCcnn]
   vpcInstances: [tencentVpc] @hasInverse(field: routeTables)
+  subnets: [tencentSubnet] @hasInverse(field: routeTables)
 }

@@ -37,6 +37,7 @@ export type TencentRouteTable = TencentBaseService & {
   routeSet?: Maybe<Array<Maybe<TencentRouteTableRoute>>>;
   routeTableId?: Maybe<Scalars['String']>;
   routeTableName?: Maybe<Scalars['String']>;
+  subnets?: Maybe<Array<Maybe<TencentSubnet>>>;
   tags?: Maybe<Array<Maybe<TencentRawTag>>>;
   vpcInstances?: Maybe<Array<Maybe<TencentVpc>>>;
 };
@@ -82,6 +83,7 @@ export type TencentSubnet = TencentBaseService & {
   name?: Maybe<Scalars['String']>;
   networkAclId?: Maybe<Scalars['String']>;
   routeTableId?: Maybe<Scalars['String']>;
+  routeTables?: Maybe<Array<Maybe<TencentRouteTable>>>;
   tags?: Maybe<Array<Maybe<TencentRawTag>>>;
   totalIpAddressCount?: Maybe<Scalars['Int']>;
   vpcInstances?: Maybe<Array<Maybe<TencentVpc>>>;
