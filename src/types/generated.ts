@@ -39,6 +39,20 @@ export type TencentSecurityGroup = TencentBaseService & {
   updateTime?: Maybe<Scalars['String']>;
 };
 
+export type TencentSecurityGroupRule = TencentBaseService & {
+  description?: Maybe<Scalars['String']>;
+  destContent?: Maybe<Scalars['String']>;
+  destType?: Maybe<Scalars['String']>;
+  enable?: Maybe<Scalars['String']>;
+  orderIndex?: Maybe<Scalars['String']>;
+  port?: Maybe<Scalars['String']>;
+  protocol?: Maybe<Scalars['String']>;
+  ruleAction?: Maybe<Scalars['String']>;
+  serviceTemplateId?: Maybe<Scalars['String']>;
+  sourceContent?: Maybe<Scalars['String']>;
+  sourceType?: Maybe<Scalars['String']>;
+};
+
 export type TencentSubnet = TencentBaseService & {
   availableIpAddressCount?: Maybe<Scalars['Int']>;
   cdcId?: Maybe<Scalars['String']>;

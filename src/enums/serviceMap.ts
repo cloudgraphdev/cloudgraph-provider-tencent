@@ -1,5 +1,6 @@
 import services from './services'
 import TencentSecurityGroup from '../services/securityGroup'
+import TencentSecurityGroupRule from '../services/securityGroupRule'
 import TencentSubnet from '../services/subnet'
 import TencentVpc from '../services/vpc'
 import TencentTag from '../services/tag'
@@ -10,6 +11,7 @@ import TencentTag from '../services/tag'
  */
 export default {
   [services.securityGroup]: TencentSecurityGroup,
+  [services.securityGroupRule]: TencentSecurityGroupRule,
   [services.subnet]: TencentSubnet,
   [services.vpc]: TencentVpc,
   tag: TencentTag,
