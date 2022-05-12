@@ -63,6 +63,27 @@ export type TencentKeyValue = {
   value?: Maybe<Scalars['String']>;
 };
 
+export type TencentNetworkAcl = TencentBaseService & {
+  createdTime?: Maybe<Scalars['String']>;
+  egressEntries?: Maybe<Array<Maybe<TencentNetworkAclEntry>>>;
+  ingressEntries?: Maybe<Array<Maybe<TencentNetworkAclEntry>>>;
+  name?: Maybe<Scalars['String']>;
+  subnets?: Maybe<Array<Maybe<TencentSubnet>>>;
+  vpcId?: Maybe<Scalars['String']>;
+  vpcInstance?: Maybe<Array<Maybe<TencentVpc>>>;
+};
+
+export type TencentNetworkAclEntry = {
+  action?: Maybe<Scalars['String']>;
+  cidrBlock?: Maybe<Scalars['String']>;
+  description?: Maybe<Scalars['String']>;
+  id: Scalars['String'];
+  ipv6CidrBlock?: Maybe<Scalars['String']>;
+  modifyTime?: Maybe<Scalars['String']>;
+  port?: Maybe<Scalars['String']>;
+  protocol?: Maybe<Scalars['String']>;
+};
+
 export type TencentRawTag = {
   id: Scalars['String'];
   key?: Maybe<Scalars['String']>;
@@ -145,6 +166,7 @@ export type TencentSubnet = TencentBaseService & {
   isDefault?: Maybe<Scalars['Boolean']>;
   isRemoteVpcSnat?: Maybe<Scalars['Boolean']>;
   name?: Maybe<Scalars['String']>;
+  networkAcl?: Maybe<Array<Maybe<TencentNetworkAcl>>>;
   networkAclId?: Maybe<Scalars['String']>;
   routeTableId?: Maybe<Scalars['String']>;
   routeTables?: Maybe<Array<Maybe<TencentRouteTable>>>;
@@ -174,6 +196,7 @@ export type TencentVpc = TencentBaseService & {
   ipv6CidrBlock?: Maybe<Scalars['String']>;
   isDefault?: Maybe<Scalars['Boolean']>;
   name?: Maybe<Scalars['String']>;
+  networkAcl?: Maybe<Array<Maybe<TencentNetworkAcl>>>;
   routeTables?: Maybe<Array<Maybe<TencentRouteTable>>>;
   subnets?: Maybe<Array<Maybe<TencentSubnet>>>;
   tags?: Maybe<Array<Maybe<TencentRawTag>>>;
