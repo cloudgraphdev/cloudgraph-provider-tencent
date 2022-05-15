@@ -2,6 +2,7 @@ import services from './services'
 import TencentSubnet from '../services/subnet'
 import TencentVpc from '../services/vpc'
 import TencentTag from '../services/tag'
+import TencentVpnGateway from '../services/vpnGateway'
 
 /**
  * serviceMap is an object that contains all currently supported services
@@ -10,5 +11,6 @@ import TencentTag from '../services/tag'
 export default {
   [services.subnet]: TencentSubnet,
   [services.vpc]: TencentVpc,
+  [services.vpnGateway]: TencentVpnGateway,
   tag: TencentTag,
 }

@@ -6,5 +6,6 @@ import services from './services'
 export default {
   [services.subnet]: 'tencentSubnet',
   [services.vpc]: 'tencentVpc',
+  [services.vpnGateway]: 'tencentVpnGateway',
   tag: 'tencentTag',
 }

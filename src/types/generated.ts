@@ -69,6 +69,7 @@ export type TencentVpc = TencentBaseService & {
   name?: Maybe<Scalars['String']>;
   subnets?: Maybe<Array<Maybe<TencentSubnet>>>;
   tags?: Maybe<Array<Maybe<TencentRawTag>>>;
+  vpnGateways?: Maybe<Array<Maybe<TencentVpnGateway>>>;
 };
 
 export type TencentVpcAssistantCidr = {
@@ -77,4 +78,33 @@ export type TencentVpcAssistantCidr = {
   id: Scalars['String'];
   subnetSet?: Maybe<Array<Maybe<TencentSubnet>>>;
   vpcId?: Maybe<Scalars['String']>;
+};
+
+export type TencentVpnGateway = TencentBaseService & {
+  cdcId?: Maybe<Scalars['String']>;
+  createdTime?: Maybe<Scalars['String']>;
+  expiredTime?: Maybe<Scalars['String']>;
+  instanceChargeType?: Maybe<Scalars['String']>;
+  internetMaxBandwidthOut?: Maybe<Scalars['Int']>;
+  isAddressBlocked?: Maybe<Scalars['Boolean']>;
+  maxConnection?: Maybe<Scalars['Int']>;
+  name?: Maybe<Scalars['String']>;
+  networkInstanceId?: Maybe<Scalars['String']>;
+  newPurchasePlan?: Maybe<Scalars['String']>;
+  publicIpAddress?: Maybe<Scalars['String']>;
+  renewFlag?: Maybe<Scalars['String']>;
+  restrictState?: Maybe<Scalars['String']>;
+  state?: Maybe<Scalars['String']>;
+  type?: Maybe<Scalars['String']>;
+  version?: Maybe<Scalars['String']>;
+  vpcInstances?: Maybe<Array<Maybe<TencentVpc>>>;
+  vpnGatewayQuotaSet?: Maybe<Array<Maybe<TencentVpnGatewayQuota>>>;
+  zone?: Maybe<Scalars['String']>;
+};
+
+export type TencentVpnGatewayQuota = {
+  bandwidth?: Maybe<Scalars['Int']>;
+  cname?: Maybe<Scalars['String']>;
+  id: Scalars['String'];
+  name?: Maybe<Scalars['String']>;
 };
