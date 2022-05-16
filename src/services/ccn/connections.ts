@@ -3,6 +3,8 @@ import { RawTencentCcn } from './data'
 import services from '../../enums/services'
 import aliases from '../../enums/serviceAliases'
 
+const serviceName = 'ccn'
+
 export default ({
   service,
   data,
