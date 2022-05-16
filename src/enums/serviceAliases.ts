@@ -1,7 +1,8 @@
 export default {
-  securityGroup: 'securityGroups',
+  camPolicy: 'camPolicies',
   ccn: 'ccns',
   ccnAttachment: 'ccnAttachments',
+  securityGroup: 'securityGroups',
   subnet: 'subnets',
   vpc: 'vpcInstances',
   vpnGateway: 'vpnGateways',

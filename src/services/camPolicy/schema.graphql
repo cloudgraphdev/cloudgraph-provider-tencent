@@ -1,0 +1,16 @@
+type tencentCamPolicy implements tencentBaseService @key(fields: "id") {
+    name: String @search(by: [hash, regexp])
+    addTime: String @search(by: [hash, regexp])
+    type: Int @search
+    description: String @search(by: [hash, regexp])
+    createMode: Int @search
+    attachments: Int @search
+    serviceType: String @search(by: [hash, regexp])
+    isAttached: Int @search
+    deactived: Int @search
+    deactivedDetail: [String] @search(by: [hash])
+    isServiceLinkedPolicy: Int @search
+    attachEntityCount: Int @search
+    attachEntityBoundaryCount: Int @search
+    updateTime: String @search(by: [hash, regexp])
+}

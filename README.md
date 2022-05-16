@@ -56,10 +56,11 @@ CloudGraph Tencent Provider will ask you what regions you would like to crawl an
 
 | Service | Relations |
 | ------------------- | ------------------- |
-| securityGroup | | 
-| securityGroupRule | |
+| camPolicy | |
 | ccn | ccnAttachment |
 | ccnAttachment | ccn |
+| securityGroup | | 
+| securityGroupRule | |
 | subnet | vpc |
 | vpc | subnet, vpnGateway |
 | vpnGateway | vpc |
