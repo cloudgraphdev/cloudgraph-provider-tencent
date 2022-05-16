@@ -1,0 +1,16 @@
+type tencentCcnAttachment implements tencentBaseService @key(fields: "id") {
+  instanceType: String @search(by: [hash, regexp])
+  instanceId: String @search(by: [hash, regexp])
+  instanceName: String @search(by: [hash, regexp])
+  instanceRegion: String @search(by: [hash, regexp])
+  instanceUin: String @search(by: [hash, regexp])
+  cidrBlock: [String] @search(by: [hash])
+  state: String @search(by: [hash, regexp])
+  attachedTime: String @search(by: [hash, regexp])
+  ccnUin: String @search(by: [hash, regexp])
+  instanceArea: String @search(by: [hash, regexp])
+  description: String @search(by: [hash, regexp])
+  routeTableId: String @search(by: [hash, regexp])
+  routeTableName: String @search(by: [hash, regexp])
+  ccns: [tencentCcn] @hasInverse(field: ccnAttachments)
+}
