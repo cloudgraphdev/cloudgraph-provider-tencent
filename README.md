@@ -61,4 +61,5 @@ CloudGraph Tencent Provider will ask you what regions you would like to crawl an
 | ccn | ccnAttachment |
 | ccnAttachment | ccn |
 | subnet | vpc |
-| vpc | subnet |
+| vpc | subnet, vpnGateway |
+| vpnGateway | vpc |

@@ -5,4 +5,5 @@ export default {
   ccnAttachment: 'ccnAttachment',
   subnet: 'subnet',
   vpc: 'vpc',
+  vpnGateway: 'vpnGateway',
 }
