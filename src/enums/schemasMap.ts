@@ -6,6 +6,8 @@ import services from './services'
 export default {
   [services.securityGroup]: 'tencentSecurityGroup',
   [services.securityGroupRule]: 'tencentSecurityGroupRule',
+  [services.ccn]: 'tencentCcn',
+  [services.ccnAttachment]: 'tencentCcnAttachment',
   [services.subnet]: 'tencentSubnet',
   [services.vpc]: 'tencentVpc',
   tag: 'tencentTag',

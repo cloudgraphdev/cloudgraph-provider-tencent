@@ -17,6 +17,39 @@ export type TencentBaseService = {
   region?: Maybe<Scalars['String']>;
 };
 
+export type TencentCcn = TencentBaseService & {
+  bandwidthLimitType?: Maybe<Scalars['String']>;
+  ccnAttachments?: Maybe<Array<Maybe<TencentCcnAttachment>>>;
+  ccnDescription?: Maybe<Scalars['String']>;
+  ccnName?: Maybe<Scalars['String']>;
+  createTime?: Maybe<Scalars['String']>;
+  instanceChargeType?: Maybe<Scalars['String']>;
+  instanceCount?: Maybe<Scalars['Int']>;
+  qosLevel?: Maybe<Scalars['String']>;
+  routePriorityFlag?: Maybe<Scalars['Boolean']>;
+  routeTableCount?: Maybe<Scalars['Int']>;
+  routeTableFlag?: Maybe<Scalars['Boolean']>;
+  state?: Maybe<Scalars['String']>;
+  tags?: Maybe<Array<Maybe<TencentRawTag>>>;
+};
+
+export type TencentCcnAttachment = TencentBaseService & {
+  attachedTime?: Maybe<Scalars['String']>;
+  ccnUin?: Maybe<Scalars['String']>;
+  ccns?: Maybe<Array<Maybe<TencentCcn>>>;
+  cidrBlock?: Maybe<Array<Maybe<Scalars['String']>>>;
+  description?: Maybe<Scalars['String']>;
+  instanceArea?: Maybe<Scalars['String']>;
+  instanceId?: Maybe<Scalars['String']>;
+  instanceName?: Maybe<Scalars['String']>;
+  instanceRegion?: Maybe<Scalars['String']>;
+  instanceType?: Maybe<Scalars['String']>;
+  instanceUin?: Maybe<Scalars['String']>;
+  routeTableId?: Maybe<Scalars['String']>;
+  routeTableName?: Maybe<Scalars['String']>;
+  state?: Maybe<Scalars['String']>;
+};
+
 export type TencentKeyValue = {
   id: Scalars['String'];
   key: Scalars['String'];
