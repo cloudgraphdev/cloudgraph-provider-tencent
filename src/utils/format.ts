@@ -2,14 +2,6 @@ import cuid from 'cuid'
 import { TencentKeyValue, TencentRawTag } from '../types/generated'
 import { TagMap, KeyValueMapMap } from '../types'
 
-export const formatTagSet = (tagSet): Array<TencentKeyValue> => {
-  return tagSet?.map(tag => ({
-    id: cuid(),
-    key: tag.Key,
-    value: tag.Value,
-  }))
-}
-
 export const formatKeyValueMap = (keyValueMap: KeyValueMapMap): TencentKeyValue[] => {
   return Object.keys(keyValueMap || {}).map(key => ({
     id: cuid(),
