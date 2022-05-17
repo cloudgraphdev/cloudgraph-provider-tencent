@@ -1,0 +1,34 @@
+type tencentVpnGatewayQuota
+  @generate(
+    query: { get: false, query: true, aggregate: false }
+    mutation: { add: false, delete: false }
+    subscription: false
+  )
+  @key(fields: "id") {
+    id: String! @id @search(by: [hash, regexp])
+    bandwidth: Int @search
+    cname: String @search(by: [hash, regexp])
+    name: String @search(by: [hash, regexp])
+  }
+
+type tencentVpnGateway implements tencentBaseService @key(fields: "id") {
+  name: String @search(by: [hash, regexp])
+  type: String @search(by: [hash, regexp])
+  state: String @search(by: [hash, regexp])
+  publicIpAddress: String @search(by: [hash, regexp])
+  renewFlag: String @search(by: [hash, regexp])
+  instanceChargeType: String @search(by: [hash, regexp])
+  internetMaxBandwidthOut: Int @search
+  createdTime: String @search(by: [hash, regexp])
+  expiredTime: String @search(by: [hash, regexp])
+  isAddressBlocked: Boolean @search
+  newPurchasePlan: String @search(by: [hash, regexp])
+  restrictState: String @search(by: [hash, regexp])
+  zone: String @search(by: [hash, regexp])
+  vpnGatewayQuotaSet: [tencentVpnGatewayQuota],
+  version: String @search(by: [hash, regexp])
+  networkInstanceId: String @search(by: [hash, regexp])
+  cdcId: String @search(by: [hash, regexp])
+  maxConnection: Int @search
+  vpcInstances: [tencentVpc] @hasInverse(field: vpnGateways)
+}

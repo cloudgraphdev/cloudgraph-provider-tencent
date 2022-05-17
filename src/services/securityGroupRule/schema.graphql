@@ -1,0 +1,13 @@
+type tencentSecurityGroupRule implements tencentBaseService @key(fields: "id") { 
+  sourceContent: String @search(by: [hash, regexp])
+  sourceType: String @search(by: [hash, regexp])
+  destContent: String @search(by: [hash, regexp])
+  destType: String @search(by: [hash, regexp])
+  ruleAction: String @search(by: [hash, regexp])
+  description: String @search(by: [hash, regexp])
+  orderIndex: String @search(by: [hash, regexp])
+  protocol: String @search(by: [hash, regexp])
+  port: String @search(by: [hash, regexp])
+  serviceTemplateId: String @search(by: [hash, regexp])
+  enable: String @search(by: [hash, regexp])
+}

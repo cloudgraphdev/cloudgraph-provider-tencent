@@ -13,6 +13,7 @@ type tencentVpc implements tencentBaseService @key(fields: "id") {
   assistantCidrSet: [tencentVpcAssistantCidr]
   subnets: [tencentSubnet] @hasInverse(field: vpcInstances)
   routeTables: [tencentRouteTable] @hasInverse(field: vpcInstances)
+  vpnGateways: [tencentVpnGateway] @hasInverse(field: vpcInstances)
 }
 
 type tencentVpcAssistantCidr

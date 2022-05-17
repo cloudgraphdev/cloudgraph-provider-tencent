@@ -5,7 +5,12 @@ import services from './services'
  */
 export default {
   [services.routeTable]: 'tencentRouteTable',
+  [services.securityGroup]: 'tencentSecurityGroup',
+  [services.securityGroupRule]: 'tencentSecurityGroupRule',
+  [services.ccn]: 'tencentCcn',
+  [services.ccnAttachment]: 'tencentCcnAttachment',
   [services.subnet]: 'tencentSubnet',
   [services.vpc]: 'tencentVpc',
+  [services.vpnGateway]: 'tencentVpnGateway',
   tag: 'tencentTag',
 }
