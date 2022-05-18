@@ -6,6 +6,7 @@ import TencentCcnAttachment from '../services/ccnAttachment'
 import TencentSubnet from '../services/subnet'
 import TencentVpc from '../services/vpc'
 import TencentTag from '../services/tag'
+import TencentRouteTable from '../services/routeTable'
 import TencentVpnGateway from '../services/vpnGateway'
 
 /**
@@ -13,6 +14,7 @@ import TencentVpnGateway from '../services/vpnGateway'
  * serviceMap is used by the serviceFactory to produce instances of service classes
  */
 export default {
+  [services.routeTable]: TencentRouteTable,
   [services.securityGroup]: TencentSecurityGroup,
   [services.securityGroupRule]: TencentSecurityGroupRule,
   [services.ccn]: TencentCcn,

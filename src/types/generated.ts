@@ -62,6 +62,47 @@ export type TencentRawTag = {
   value?: Maybe<Scalars['String']>;
 };
 
+export type TencentRouteTable = TencentBaseService & {
+  associationSet?: Maybe<Array<Maybe<TencentRouteTableAssociation>>>;
+  createdTime?: Maybe<Scalars['String']>;
+  localCidrForCcn?: Maybe<Array<Maybe<TencentRouteTableLocalCidrForCcnn>>>;
+  main?: Maybe<Scalars['Boolean']>;
+  routeSet?: Maybe<Array<Maybe<TencentRouteTableRoute>>>;
+  routeTableId?: Maybe<Scalars['String']>;
+  routeTableName?: Maybe<Scalars['String']>;
+  subnets?: Maybe<Array<Maybe<TencentSubnet>>>;
+  tags?: Maybe<Array<Maybe<TencentRawTag>>>;
+  vpcInstances?: Maybe<Array<Maybe<TencentVpc>>>;
+};
+
+export type TencentRouteTableAssociation = {
+  id: Scalars['String'];
+  routeTableId?: Maybe<Scalars['String']>;
+  subnetId?: Maybe<Scalars['String']>;
+};
+
+export type TencentRouteTableLocalCidrForCcnn = {
+  cidr?: Maybe<Scalars['String']>;
+  id: Scalars['String'];
+  publishedToVbc?: Maybe<Scalars['Boolean']>;
+};
+
+export type TencentRouteTableRoute = {
+  createdTime?: Maybe<Scalars['String']>;
+  destinationCidrBlock?: Maybe<Scalars['String']>;
+  destinationIpv6CidrBlock?: Maybe<Scalars['String']>;
+  enabled?: Maybe<Scalars['Boolean']>;
+  gatewayId?: Maybe<Scalars['String']>;
+  gatewayType?: Maybe<Scalars['String']>;
+  id: Scalars['String'];
+  publishedToVbc?: Maybe<Scalars['Boolean']>;
+  routeDescription?: Maybe<Scalars['String']>;
+  routeId?: Maybe<Scalars['Int']>;
+  routeItemId?: Maybe<Scalars['String']>;
+  routeTableId?: Maybe<Scalars['String']>;
+  routeType?: Maybe<Scalars['String']>;
+};
+
 export type TencentSecurityGroup = TencentBaseService & {
   createdTime?: Maybe<Scalars['String']>;
   isDefault?: Maybe<Scalars['Boolean']>;
@@ -99,6 +140,7 @@ export type TencentSubnet = TencentBaseService & {
   name?: Maybe<Scalars['String']>;
   networkAclId?: Maybe<Scalars['String']>;
   routeTableId?: Maybe<Scalars['String']>;
+  routeTables?: Maybe<Array<Maybe<TencentRouteTable>>>;
   tags?: Maybe<Array<Maybe<TencentRawTag>>>;
   totalIpAddressCount?: Maybe<Scalars['Int']>;
   vpcInstances?: Maybe<Array<Maybe<TencentVpc>>>;
@@ -125,6 +167,7 @@ export type TencentVpc = TencentBaseService & {
   ipv6CidrBlock?: Maybe<Scalars['String']>;
   isDefault?: Maybe<Scalars['Boolean']>;
   name?: Maybe<Scalars['String']>;
+  routeTables?: Maybe<Array<Maybe<TencentRouteTable>>>;
   subnets?: Maybe<Array<Maybe<TencentSubnet>>>;
   tags?: Maybe<Array<Maybe<TencentRawTag>>>;
   vpnGateways?: Maybe<Array<Maybe<TencentVpnGateway>>>;

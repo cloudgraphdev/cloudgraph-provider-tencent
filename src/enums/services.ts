@@ -1,4 +1,5 @@
 export default {
+  routeTable: 'routeTable',
   securityGroup: 'securityGroup',
   securityGroupRule: 'securityGroupRule',
   ccn: 'ccn',

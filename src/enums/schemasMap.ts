@@ -4,6 +4,7 @@ import services from './services'
  * schemasMap is an object that contains schemas name by resource
  */
 export default {
+  [services.routeTable]: 'tencentRouteTable',
   [services.securityGroup]: 'tencentSecurityGroup',
   [services.securityGroupRule]: 'tencentSecurityGroupRule',
   [services.ccn]: 'tencentCcn',
