@@ -1,3 +1,14 @@
+# [1.0.0-alpha.2](https://github.com/cloudgraphdev/cloudgraph-provider-tencent/compare/1.0.0-alpha.1...1.0.0-alpha.2) (2022-05-18)
+
+
+### Features
+
+* **routeTable:** add connection from routeTable to subnet ([6a34907](https://github.com/cloudgraphdev/cloudgraph-provider-tencent/commit/6a3490754dc5da4aa3ebe68072b2f6fe5063130b))
+* **routeTable:** add routeTable ([112f1d5](https://github.com/cloudgraphdev/cloudgraph-provider-tencent/commit/112f1d561208e122b36b51e842f2802cf1ee76be))
+* **routeTable:** add routeTable service ([76ff05a](https://github.com/cloudgraphdev/cloudgraph-provider-tencent/commit/76ff05ac8cb7cad4ccdf68b5d74633248a350aa8))
+* **routeTable:** update README ([f32ffec](https://github.com/cloudgraphdev/cloudgraph-provider-tencent/commit/f32ffecf3e67551826fae5025b3c2bf0e2a1feb4))
+* **routeTable:** update README ([3fd9c90](https://github.com/cloudgraphdev/cloudgraph-provider-tencent/commit/3fd9c9080b6ee007ec598b86b108f301e34e41af))
+
 # 1.0.0-alpha.1 (2022-05-16)
 
 
