@@ -4,6 +4,7 @@ import CloudGraph from '@cloudgraph/sdk'
 import groupBy from 'lodash/groupBy'
 import isEmpty from 'lodash/isEmpty'
 import { StrategyInfo } from 'tencentcloud-sdk-nodejs/tencentcloud/services/cam/v20190116/cam_models'
+import cuid from 'cuid'
 import loggerText from '../../properties/logger'
 import { TencentServiceInput } from '../../types'
 import { initTestEndpoint, generateTencentErrorLog } from '../../utils'
@@ -14,7 +15,7 @@ export const serviceName = 'CamPolicy'
 const apiEndpoint = initTestEndpoint(serviceName)
 
 export interface RawTencentCamPolicy extends StrategyInfo {
-  id: number
+  id: string
   region: string
 }
 
@@ -38,7 +39,7 @@ export default async ({
         if (response && !isEmpty(response.List)) {
           for (const instance of response.List) {
             camPolicyList.push({
-              id: instance.PolicyId,
+              id: cuid(),
               ...instance,
               region,
             })

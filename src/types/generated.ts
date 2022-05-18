@@ -29,6 +29,7 @@ export type TencentCamPolicy = TencentBaseService & {
   isAttached?: Maybe<Scalars['Int']>;
   isServiceLinkedPolicy?: Maybe<Scalars['Int']>;
   name?: Maybe<Scalars['String']>;
+  policyId?: Maybe<Scalars['Int']>;
   serviceType?: Maybe<Scalars['String']>;
   type?: Maybe<Scalars['Int']>;
   updateTime?: Maybe<Scalars['String']>;

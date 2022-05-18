@@ -10,6 +10,7 @@ export default ({
 }): TencentCamPolicy => {
   const {
     id,
+    PolicyId: policyId,
     PolicyName: name,
     AddTime: addTime,
     Type: type,
@@ -28,6 +29,7 @@ export default ({
 
   return {
     id: `${id}`,
+    policyId,
     region,
     name,
     addTime,

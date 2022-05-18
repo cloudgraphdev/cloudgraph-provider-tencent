@@ -1,4 +1,5 @@
 type tencentCamPolicy implements tencentBaseService @key(fields: "id") {
+    policyId: Int @search
     name: String @search(by: [hash, regexp])
     addTime: String @search(by: [hash, regexp])
     type: Int @search
