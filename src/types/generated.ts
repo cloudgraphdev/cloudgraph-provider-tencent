@@ -157,6 +157,7 @@ export type TencentVpnGateway = TencentBaseService & {
   version?: Maybe<Scalars['String']>;
   vpcInstances?: Maybe<Array<Maybe<TencentVpc>>>;
   vpnGatewayQuotaSet?: Maybe<Array<Maybe<TencentVpnGatewayQuota>>>;
+  vpnGatewayRoutes?: Maybe<Array<Maybe<TencentVpnGatewayRoute>>>;
   zone?: Maybe<Scalars['String']>;
 };
 
@@ -165,4 +166,16 @@ export type TencentVpnGatewayQuota = {
   cname?: Maybe<Scalars['String']>;
   id: Scalars['String'];
   name?: Maybe<Scalars['String']>;
+};
+
+export type TencentVpnGatewayRoute = TencentBaseService & {
+  createTime?: Maybe<Scalars['String']>;
+  destinationCidrBlock?: Maybe<Scalars['String']>;
+  instanceId?: Maybe<Scalars['String']>;
+  instanceType?: Maybe<Scalars['String']>;
+  priority?: Maybe<Scalars['Int']>;
+  status?: Maybe<Scalars['String']>;
+  type?: Maybe<Scalars['String']>;
+  updateTime?: Maybe<Scalars['String']>;
+  vpnGateways?: Maybe<Array<Maybe<TencentVpnGateway>>>;
 };

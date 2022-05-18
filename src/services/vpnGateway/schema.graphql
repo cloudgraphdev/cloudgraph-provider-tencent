@@ -31,4 +31,5 @@ type tencentVpnGateway implements tencentBaseService @key(fields: "id") {
   cdcId: String @search(by: [hash, regexp])
   maxConnection: Int @search
   vpcInstances: [tencentVpc] @hasInverse(field: vpnGateways)
+  vpnGatewayRoutes: [tencentVpnGatewayRoute] @hasInverse(field: vpnGateways)
 }
