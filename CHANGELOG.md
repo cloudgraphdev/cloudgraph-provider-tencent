@@ -1,3 +1,10 @@
+# [1.0.0-alpha.3](https://github.com/cloudgraphdev/cloudgraph-provider-tencent/compare/1.0.0-alpha.2...1.0.0-alpha.3) (2022-05-19)
+
+
+### Features
+
+* **customerGateway:** add customerGateway service ([cdee2e8](https://github.com/cloudgraphdev/cloudgraph-provider-tencent/commit/cdee2e85baa41ce5364051641345af0563e2601f))
+
 # [1.0.0-alpha.2](https://github.com/cloudgraphdev/cloudgraph-provider-tencent/compare/1.0.0-alpha.1...1.0.0-alpha.2) (2022-05-18)
 
 
