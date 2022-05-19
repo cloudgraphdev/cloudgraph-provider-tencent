@@ -1,4 +1,5 @@
 export default {
+  customerGateway: 'customerGateway',
   routeTable: 'routeTable',
   securityGroup: 'securityGroup',
   securityGroupRule: 'securityGroupRule',

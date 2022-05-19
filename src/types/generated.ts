@@ -50,6 +50,13 @@ export type TencentCcnAttachment = TencentBaseService & {
   state?: Maybe<Scalars['String']>;
 };
 
+export type TencentCustomerGateway = TencentBaseService & {
+  createdTime?: Maybe<Scalars['String']>;
+  ipAddress?: Maybe<Scalars['String']>;
+  name?: Maybe<Scalars['String']>;
+  tags?: Maybe<Array<Maybe<TencentRawTag>>>;
+};
+
 export type TencentKeyValue = {
   id: Scalars['String'];
   key: Scalars['String'];
