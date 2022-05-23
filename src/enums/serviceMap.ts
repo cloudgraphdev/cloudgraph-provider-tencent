@@ -9,12 +9,14 @@ import TencentTag from '../services/tag'
 import TencentRouteTable from '../services/routeTable'
 import TencentVpnGateway from '../services/vpnGateway'
 import TencentCustomerGateway from '../services/customerGateway'
+import TencentCamUser from '../services/camUser'
 
 /**
  * serviceMap is an object that contains all currently supported services
  * serviceMap is used by the serviceFactory to produce instances of service classes
  */
 export default {
+  [services.camUser]: TencentCamUser,
   [services.customerGateway]: TencentCustomerGateway,
   [services.routeTable]: TencentRouteTable,
   [services.securityGroup]: TencentSecurityGroup,

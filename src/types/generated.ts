@@ -17,6 +17,18 @@ export type TencentBaseService = {
   region?: Maybe<Scalars['String']>;
 };
 
+export type TencentCamUser = TencentBaseService & {
+  consoleLogin?: Maybe<Scalars['Int']>;
+  countryCode?: Maybe<Scalars['String']>;
+  createTime?: Maybe<Scalars['String']>;
+  email?: Maybe<Scalars['String']>;
+  name?: Maybe<Scalars['String']>;
+  nickName?: Maybe<Scalars['String']>;
+  phoneNum?: Maybe<Scalars['String']>;
+  remark?: Maybe<Scalars['String']>;
+  uin?: Maybe<Scalars['String']>;
+};
+
 export type TencentCcn = TencentBaseService & {
   bandwidthLimitType?: Maybe<Scalars['String']>;
   ccnAttachments?: Maybe<Array<Maybe<TencentCcnAttachment>>>;

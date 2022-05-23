@@ -1,4 +1,5 @@
 export default {
+  camUser: 'camUser',
   customerGateway: 'customerGateway',
   routeTable: 'routeTable',
   securityGroup: 'securityGroup',
