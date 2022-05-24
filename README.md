@@ -56,6 +56,7 @@ CloudGraph Tencent Provider will ask you what regions you would like to crawl an
 
 | Service | Relations |
 | ------------------- | ------------------- |
+| camUser | |
 | customerGateway | |
 | routeTable | vpc, subnet |
 | securityGroup | | 
