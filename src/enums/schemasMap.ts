@@ -13,5 +13,6 @@ export default {
   [services.subnet]: 'tencentSubnet',
   [services.vpc]: 'tencentVpc',
   [services.vpnGateway]: 'tencentVpnGateway',
+  [services.vpnGatewayRoute]: 'tencentVpnGatewayRoute',
   tag: 'tencentTag',
 }

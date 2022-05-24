@@ -8,6 +8,7 @@ import TencentVpc from '../services/vpc'
 import TencentTag from '../services/tag'
 import TencentRouteTable from '../services/routeTable'
 import TencentVpnGateway from '../services/vpnGateway'
+import TencentVpnGatewayRoute from '../services/vpnGatewayRoute'
 import TencentCustomerGateway from '../services/customerGateway'
 
 /**
@@ -24,5 +25,6 @@ export default {
   [services.subnet]: TencentSubnet,
   [services.vpc]: TencentVpc,
   [services.vpnGateway]: TencentVpnGateway,
+  [services.vpnGatewayRoute]: TencentVpnGatewayRoute,
   tag: TencentTag,
 }
