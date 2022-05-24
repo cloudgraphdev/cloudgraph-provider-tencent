@@ -1,0 +1,58 @@
+type tencentRouteTableAssociation
+  @generate(
+    query: { get: false, query: true, aggregate: false }
+    mutation: { add: false, delete: false }
+    subscription: false
+  )
+  @key(fields: "id") {
+  id: String! @id
+  subnetId: String @search(by: [hash, regexp])
+  routeTableId: String @search(by: [hash, regexp])
+}
+
+type tencentRouteTableRoute
+  @generate(
+    query: { get: false, query: true, aggregate: false }
+    mutation: { add: false, delete: false }
+    subscription: false
+  )
+  @key(fields: "id") {
+  id: String! @id
+  destinationCidrBlock: String @search(by: [hash, regexp])
+  gatewayType: String @search(by: [hash, regexp])
+  gatewayId: String @search(by: [hash, regexp])
+  routeId: Int @search
+  routeDescription: String @search(by: [hash, regexp])
+  enabled: Boolean @search
+  routeType: String @search(by: [hash, regexp])
+  routeTableId: String @search(by: [hash, regexp])
+  destinationIpv6CidrBlock: String @search(by: [hash, regexp])
+  routeItemId: String @search(by: [hash, regexp])
+  publishedToVbc: Boolean @search
+  createdTime: String @search(by: [hash, regexp])
+}
+
+type tencentRouteTableLocalCidrForCcnn
+  @generate(
+    query: { get: false, query: true, aggregate: false }
+    mutation: { add: false, delete: false }
+    subscription: false
+  )
+  @key(fields: "id") {
+  id: String! @id
+  cidr: String @search(by: [hash, regexp])
+  publishedToVbc: Boolean @search
+}
+
+type tencentRouteTable implements tencentBaseService @key(fields: "id") {
+  routeTableId: String @search(by: [hash, regexp])
+  routeTableName: String @search(by: [hash, regexp])
+  associationSet: [tencentRouteTableAssociation]
+  routeSet: [tencentRouteTableRoute]
+  main: Boolean @search
+  createdTime: String @search(by: [hash, regexp])
+  tags: [tencentRawTag]
+  localCidrForCcn: [tencentRouteTableLocalCidrForCcnn]
+  vpcInstances: [tencentVpc] @hasInverse(field: routeTables)
+  subnets: [tencentSubnet] @hasInverse(field: routeTables)
+}

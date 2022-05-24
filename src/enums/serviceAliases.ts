@@ -1,4 +1,5 @@
 export default {
+  routeTable: 'routeTables',
   securityGroup: 'securityGroups',
   ccn: 'ccns',
   ccnAttachment: 'ccnAttachments',

@@ -15,4 +15,5 @@ type tencentSubnet implements tencentBaseService @key(fields: "id") {
   cdcId: String @search(by: [hash, regexp])
   isCdcSubnet: Int @search
   vpcInstances: [tencentVpc] @hasInverse(field: subnets)
+  routeTables: [tencentRouteTable] @hasInverse(field: subnets)
 }

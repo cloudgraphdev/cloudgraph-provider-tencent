@@ -1,0 +1,6 @@
+type tencentCustomerGateway implements tencentBaseService @key(fields: "id") {
+  name: String @search(by: [hash, regexp])
+  ipAddress: String @search(by: [hash, regexp])
+  createdTime: String @search(by: [hash, regexp])
+  tags: [tencentRawTag]
+}
