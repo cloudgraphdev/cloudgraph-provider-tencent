@@ -1,6 +1,6 @@
 {
   "name": "@cloudgraph/cg-provider-tencent",
-  "version": "1.0.0-alpha.3",
+  "version": "1.0.0-alpha.4",
   "description": "CloudGraph provider plugin for Tencent Cloud used to fetch Tencent Cloud data.",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/",
