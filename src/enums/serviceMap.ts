@@ -1,4 +1,5 @@
 import services from './services'
+import TencentNetworkAcl from '../services/networkAcl'
 import TencentSecurityGroup from '../services/securityGroup'
 import TencentSecurityGroupRule from '../services/securityGroupRule'
 import TencentCcn from '../services/ccn'
@@ -22,6 +23,9 @@ export default {
   [services.securityGroupRule]: TencentSecurityGroupRule,
   [services.ccn]: TencentCcn,
   [services.ccnAttachment]: TencentCcnAttachment,
+  [services.networkAcl]: TencentNetworkAcl,
+  [services.securityGroup]: TencentSecurityGroup,
+  [services.securityGroupRule]: TencentSecurityGroupRule,
   [services.subnet]: TencentSubnet,
   [services.vpc]: TencentVpc,
   [services.vpnGateway]: TencentVpnGateway,

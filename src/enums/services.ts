@@ -1,6 +1,7 @@
 export default {
   customerGateway: 'customerGateway',
   routeTable: 'routeTable',
+  networkAcl: 'networkAcl',
   securityGroup: 'securityGroup',
   securityGroupRule: 'securityGroupRule',
   ccn: 'ccn',
