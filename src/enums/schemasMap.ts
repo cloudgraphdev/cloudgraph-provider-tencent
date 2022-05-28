@@ -12,6 +12,7 @@ export default {
   [services.ccnAttachment]: 'tencentCcnAttachment',
   [services.subnet]: 'tencentSubnet',
   [services.vpc]: 'tencentVpc',
+  [services.vpnConnection]: 'tencentVpnConnection',
   [services.vpnGateway]: 'tencentVpnGateway',
   [services.vpnGatewayRoute]: 'tencentVpnGatewayRoute',
   tag: 'tencentTag',
