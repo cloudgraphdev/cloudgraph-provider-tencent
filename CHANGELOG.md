@@ -1,3 +1,12 @@
+# [1.0.0-alpha.5](https://github.com/cloudgraphdev/cloudgraph-provider-tencent/compare/1.0.0-alpha.4...1.0.0-alpha.5) (2022-05-26)
+
+
+### Features
+
+* **networkAcl:** add networkAcl service ([3665d1e](https://github.com/cloudgraphdev/cloudgraph-provider-tencent/commit/3665d1e14782040d601152a252bd889e64fdef98))
+* **securityGroup:** add security group service ([5be1232](https://github.com/cloudgraphdev/cloudgraph-provider-tencent/commit/5be123281dca7d37e29e91617f03ece3b6a2b07c))
+* **securityGroupRule:** add securityGroupRule service ([c436eb8](https://github.com/cloudgraphdev/cloudgraph-provider-tencent/commit/c436eb8a15269f6738527a415421638f22e95193))
+
 # [1.0.0-alpha.4](https://github.com/cloudgraphdev/cloudgraph-provider-tencent/compare/1.0.0-alpha.3...1.0.0-alpha.4) (2022-05-24)
 
 
