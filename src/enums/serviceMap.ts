@@ -11,23 +11,23 @@ import TencentRouteTable from '../services/routeTable'
 import TencentVpnGateway from '../services/vpnGateway'
 import TencentVpnGatewayRoute from '../services/vpnGatewayRoute'
 import TencentCustomerGateway from '../services/customerGateway'
+import TencentVpnConnection from '../services/vpnConnection'
 
 /**
  * serviceMap is an object that contains all currently supported services
  * serviceMap is used by the serviceFactory to produce instances of service classes
  */
 export default {
-  [services.customerGateway]: TencentCustomerGateway,
-  [services.routeTable]: TencentRouteTable,
-  [services.securityGroup]: TencentSecurityGroup,
-  [services.securityGroupRule]: TencentSecurityGroupRule,
   [services.ccn]: TencentCcn,
   [services.ccnAttachment]: TencentCcnAttachment,
+  [services.customerGateway]: TencentCustomerGateway,
   [services.networkAcl]: TencentNetworkAcl,
+  [services.routeTable]: TencentRouteTable,
   [services.securityGroup]: TencentSecurityGroup,
   [services.securityGroupRule]: TencentSecurityGroupRule,
   [services.subnet]: TencentSubnet,
   [services.vpc]: TencentVpc,
+  [services.vpnConnection]: TencentVpnConnection,
   [services.vpnGateway]: TencentVpnGateway,
   [services.vpnGatewayRoute]: TencentVpnGatewayRoute,
   tag: TencentTag,

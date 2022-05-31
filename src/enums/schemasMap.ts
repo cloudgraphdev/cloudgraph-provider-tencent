@@ -15,6 +15,7 @@ export default {
   [services.securityGroupRule]: 'tencentSecurityGroupRule',
   [services.subnet]: 'tencentSubnet',
   [services.vpc]: 'tencentVpc',
+  [services.vpnConnection]: 'tencentVpnConnection',
   [services.vpnGateway]: 'tencentVpnGateway',
   [services.vpnGatewayRoute]: 'tencentVpnGatewayRoute',
   tag: 'tencentTag',

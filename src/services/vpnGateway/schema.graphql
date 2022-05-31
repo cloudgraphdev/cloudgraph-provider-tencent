@@ -32,4 +32,5 @@ type tencentVpnGateway implements tencentBaseService @key(fields: "id") {
   maxConnection: Int @search
   vpcInstances: [tencentVpc] @hasInverse(field: vpnGateways)
   vpnGatewayRoutes: [tencentVpnGatewayRoute] @hasInverse(field: vpnGateways)
+  vpnConnections: [tencentVpnConnection] @hasInverse(field: vpnGateways)
 }

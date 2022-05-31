@@ -3,4 +3,5 @@ type tencentCustomerGateway implements tencentBaseService @key(fields: "id") {
   ipAddress: String @search(by: [hash, regexp])
   createdTime: String @search(by: [hash, regexp])
   tags: [tencentRawTag]
+  vpnConnections: [tencentVpnConnection] @hasInverse(field: customerGateways)
 }
