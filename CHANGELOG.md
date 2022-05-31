@@ -1,3 +1,10 @@
+# [1.0.0-alpha.6](https://github.com/cloudgraphdev/cloudgraph-provider-tencent/compare/1.0.0-alpha.5...1.0.0-alpha.6) (2022-05-31)
+
+
+### Features
+
+* **vpnConnection:** add vpnConnection service ([f2b0072](https://github.com/cloudgraphdev/cloudgraph-provider-tencent/commit/f2b0072e237e787c2bf0d11358003a7a126e15de))
+
 # [1.0.0-alpha.5](https://github.com/cloudgraphdev/cloudgraph-provider-tencent/compare/1.0.0-alpha.4...1.0.0-alpha.5) (2022-05-26)
 
 
