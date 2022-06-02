@@ -1,3 +1,13 @@
+# [1.0.0-alpha.7](https://github.com/cloudgraphdev/cloudgraph-provider-tencent/compare/1.0.0-alpha.6...1.0.0-alpha.7) (2022-06-02)
+
+
+### Features
+
+* **camPolicy:** add camPolicy service ([3b8df16](https://github.com/cloudgraphdev/cloudgraph-provider-tencent/commit/3b8df166c3edd75f6b40f445f6a4375481d2f0ce))
+* **camPolicy:** add camPolicy service ([3596551](https://github.com/cloudgraphdev/cloudgraph-provider-tencent/commit/35965518ed7f32da4bf024d780d56828c5250c60))
+* **camPolicy:** add camPolicy service ([6c26c84](https://github.com/cloudgraphdev/cloudgraph-provider-tencent/commit/6c26c84f04399ce540f1c33a9e59bac3448def0c))
+* **camPolicy:** add tencent cam policy ([123b8dd](https://github.com/cloudgraphdev/cloudgraph-provider-tencent/commit/123b8dd376242fdf07e167f1c10045f13d607c58))
+
 # [1.0.0-alpha.6](https://github.com/cloudgraphdev/cloudgraph-provider-tencent/compare/1.0.0-alpha.5...1.0.0-alpha.6) (2022-05-31)
 
 
