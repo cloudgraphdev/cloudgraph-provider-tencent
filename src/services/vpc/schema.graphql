@@ -11,7 +11,9 @@ type tencentVpc implements tencentBaseService @key(fields: "id") {
   ipv6CidrBlock: String @search(by: [hash, regexp])
   tags: [tencentRawTag]
   assistantCidrSet: [tencentVpcAssistantCidr]
+  networkAcl: [tencentNetworkAcl] @hasInverse(field: vpcInstance)
   subnets: [tencentSubnet] @hasInverse(field: vpcInstances)
+  routeTables: [tencentRouteTable] @hasInverse(field: vpcInstances)
   vpnGateways: [tencentVpnGateway] @hasInverse(field: vpcInstances)
 }
 

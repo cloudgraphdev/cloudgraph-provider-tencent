@@ -1,0 +1,63 @@
+type tencentVpnConnectionSecurityPolicyDatabase
+  @generate(
+    query: { get: false, query: true, aggregate: false }
+    mutation: { add: false, delete: false }
+    subscription: false
+  )
+  @key(fields: "id") {
+    id: String! @id @search(by: [hash, regexp])
+    bandwidth: Int @search
+    localCidrBlock: String @search(by: [hash, regexp])
+    remoteCidrBlock: [String] @search(by: [hash, regexp])
+  }
+
+type tencentVpnConnectionIKEOptionsSpecification
+  @generate(
+    query: { get: true, query: true, aggregate: true }
+    mutation: { add: true, delete: false }
+  ) {
+  propoEncryAlgorithm: String @search(by: [hash, regexp])
+  propoAuthenAlgorithm: String @search(by: [hash, regexp])
+  exchangeMode: String @search(by: [hash, regexp])
+  localIdentity: String @search(by: [hash, regexp])
+  remoteIdentity: String @search(by: [hash, regexp])
+  localAddress: String @search(by: [hash, regexp])
+  remoteAddress: String @search(by: [hash, regexp])
+  localFqdnName: String @search(by: [hash, regexp])
+  remoteFqdnName: String @search(by: [hash, regexp])
+  dhGroupName: String @search(by: [hash, regexp])
+  ikeSaLifetimeSeconds: Int @search
+  ikeVersion: String @search(by: [hash, regexp])
+}
+
+type tencentVpnConnectionIPSECOptionsSpecification
+  @generate(
+    query: { get: true, query: true, aggregate: true }
+    mutation: { add: true, delete: false }
+  ) {
+    encryptAlgorithm: String @search(by: [hash, regexp])
+    integrityAlgorith: String @search(by: [hash, regexp])
+    ipsecSaLifetimeSeconds: Int @search
+    pfsDhGroup: String @search(by: [hash, regexp])
+    ipsecSaLifetimeTraffic: Int @search
+  }
+
+type tencentVpnConnection implements tencentBaseService @key(fields: "id") {
+  name: String @search(by: [hash, regexp])
+  preShareKey: String @search(by: [hash, regexp])
+  vpnProto: String @search(by: [hash, regexp])
+  encryptProto: String @search(by: [hash, regexp])
+  routeType: String @search(by: [hash, regexp])
+  createdTime: String @search(by: [hash, regexp])
+  state: String @search(by: [hash, regexp])
+  netStatus: String @search(by: [hash, regexp])
+  securityPolicyDatabaseSet: [tencentVpnConnectionSecurityPolicyDatabase]
+  ikeOptionsSpecification: tencentVpnConnectionIKEOptionsSpecification
+  ipsecOptionsSpecification: tencentVpnConnectionIPSECOptionsSpecification
+  enableHealthCheck: Boolean @search
+  healthCheckLocalIp: String @search(by: [hash, regexp])
+  healthCheckRemoteIp: String @search(by: [hash, regexp])
+  healthCheckStatus: String @search(by: [hash, regexp])
+  vpnGateways: [tencentVpnGateway] @hasInverse(field: vpnConnections)
+  customerGateways: [tencentCustomerGateway] @hasInverse(field: vpnConnections)
+}
