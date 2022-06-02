@@ -1,9 +1,10 @@
 export default {
+  camPolicy: 'camPolicy',
   ccn: 'ccn',
   ccnAttachment: 'ccnAttachment',
   customerGateway: 'customerGateway',
-  routeTable: 'routeTable',
   networkAcl: 'networkAcl',
+  routeTable: 'routeTable',
   securityGroup: 'securityGroup',
   securityGroupRule: 'securityGroupRule',
   subnet: 'subnet',

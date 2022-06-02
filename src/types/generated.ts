@@ -17,6 +17,24 @@ export type TencentBaseService = {
   region?: Maybe<Scalars['String']>;
 };
 
+export type TencentCamPolicy = TencentBaseService & {
+  addTime?: Maybe<Scalars['String']>;
+  attachEntityBoundaryCount?: Maybe<Scalars['Int']>;
+  attachEntityCount?: Maybe<Scalars['Int']>;
+  attachments?: Maybe<Scalars['Int']>;
+  createMode?: Maybe<Scalars['Int']>;
+  deactived?: Maybe<Scalars['Int']>;
+  deactivedDetail?: Maybe<Array<Maybe<Scalars['String']>>>;
+  description?: Maybe<Scalars['String']>;
+  isAttached?: Maybe<Scalars['Int']>;
+  isServiceLinkedPolicy?: Maybe<Scalars['Int']>;
+  name?: Maybe<Scalars['String']>;
+  policyId?: Maybe<Scalars['Int']>;
+  serviceType?: Maybe<Scalars['String']>;
+  type?: Maybe<Scalars['Int']>;
+  updateTime?: Maybe<Scalars['String']>;
+};
+
 export type TencentCcn = TencentBaseService & {
   bandwidthLimitType?: Maybe<Scalars['String']>;
   ccnAttachments?: Maybe<Array<Maybe<TencentCcnAttachment>>>;

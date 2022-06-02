@@ -9,6 +9,7 @@ import TencentVpc from '../services/vpc'
 import TencentTag from '../services/tag'
 import TencentRouteTable from '../services/routeTable'
 import TencentVpnGateway from '../services/vpnGateway'
+import TencentCamPolicy from '../services/camPolicy'
 import TencentVpnGatewayRoute from '../services/vpnGatewayRoute'
 import TencentCustomerGateway from '../services/customerGateway'
 import TencentVpnConnection from '../services/vpnConnection'
@@ -18,6 +19,7 @@ import TencentVpnConnection from '../services/vpnConnection'
  * serviceMap is used by the serviceFactory to produce instances of service classes
  */
 export default {
+  [services.camPolicy]: TencentCamPolicy,
   [services.ccn]: TencentCcn,
   [services.ccnAttachment]: TencentCcnAttachment,
   [services.customerGateway]: TencentCustomerGateway,
