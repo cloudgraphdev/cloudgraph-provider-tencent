@@ -1,4 +1,5 @@
 export const regionMap = {
+  global: 'global',
   southeastAsiaPacific1: 'ap-bangkok',
   southeastAsiaPacific2: 'ap-jakarta',
   northChina: 'ap-beijing',
@@ -23,6 +24,7 @@ export const regionMap = {
 }
 
 const {
+  global,
   southeastAsiaPacific1,
   southeastAsiaPacific2,
   northChina,
@@ -47,6 +49,7 @@ const {
 } = regionMap
 
 export default [
+  global,
   southeastAsiaPacific1,
   southeastAsiaPacific2,
   northChina,

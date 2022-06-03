@@ -7,6 +7,7 @@ import { SubAccountInfo } from 'tencentcloud-sdk-nodejs/tencentcloud/services/ca
 import loggerText from '../../properties/logger'
 import { TencentServiceInput } from '../../types'
 import { initTestEndpoint, generateTencentErrorLog } from '../../utils'
+import { regionMap } from '../../enums/regions'
 
 const lt = { ...loggerText }
 const { logger } = CloudGraph
@@ -19,7 +20,6 @@ export interface RawTencentCamUser extends SubAccountInfo {
 }
 
 export default async ({
-  regions,
   config,
 }: TencentServiceInput): Promise<{
   [region: string]: RawTencentCamUser[]
@@ -27,27 +27,26 @@ export default async ({
   new Promise(async resolve => {
     const camUserList: RawTencentCamUser[] = []
 
-    for (const region of regions.split(',')) {
-      try {
-        const CamClient = tencentcloud.cam.v20190116.Client
-        const clientConfig: ClientConfig  = { credential: config, region, profile: { httpProfile: { endpoint: apiEndpoint } } }
-        const cam = new CamClient(clientConfig)
+    try {
+      const CamClient = tencentcloud.cam.v20190116.Client
+      const clientConfig: ClientConfig  = { credential: config, profile: { httpProfile: { endpoint: apiEndpoint } } }
+      const cam = new CamClient(clientConfig)
 
-        const response =  await cam.ListUsers(null)
+      const response =  await cam.ListUsers(null)
 
-        if (response && !isEmpty(response.Data)) {
-          for (const instance of response.Data) {
-            camUserList.push({
-              id: `${region}-${instance.Uid}`,
-              ...instance,
-              region,
-            })
-          }
+      if (response && !isEmpty(response.Data)) {
+        for (const instance of response.Data) {
+          camUserList.push({
+            id: `${instance.Uid}`,
+            ...instance,
+            region: regionMap.global,
+          })
         }
-      } catch (error) {
-        generateTencentErrorLog(serviceName, 'cam:ListUsers', error)
       }
+    } catch (error) {
+      generateTencentErrorLog(serviceName, 'cam:ListUsers', error)
     }
+
     logger.debug(lt.foundResources(serviceName, camUserList.length))
     resolve(groupBy(camUserList, 'region'))
   })

@@ -3,13 +3,12 @@ import { RawTencentCamUser } from './data'
 
 export default ({
   service,
-  region,
 }: {
   service: RawTencentCamUser
-  region: string
 }): TencentCamUser=> {
   const {
     id,
+    region,
     Uin: uin,
     Name: name,
     NickName: nickName,
