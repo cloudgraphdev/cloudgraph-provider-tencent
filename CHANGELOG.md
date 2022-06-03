@@ -1,3 +1,38 @@
+# [1.0.0-alpha.7](https://github.com/cloudgraphdev/cloudgraph-provider-tencent/compare/1.0.0-alpha.6...1.0.0-alpha.7) (2022-06-02)
+
+
+### Features
+
+* **camPolicy:** add camPolicy service ([3b8df16](https://github.com/cloudgraphdev/cloudgraph-provider-tencent/commit/3b8df166c3edd75f6b40f445f6a4375481d2f0ce))
+* **camPolicy:** add camPolicy service ([3596551](https://github.com/cloudgraphdev/cloudgraph-provider-tencent/commit/35965518ed7f32da4bf024d780d56828c5250c60))
+* **camPolicy:** add camPolicy service ([6c26c84](https://github.com/cloudgraphdev/cloudgraph-provider-tencent/commit/6c26c84f04399ce540f1c33a9e59bac3448def0c))
+* **camPolicy:** add tencent cam policy ([123b8dd](https://github.com/cloudgraphdev/cloudgraph-provider-tencent/commit/123b8dd376242fdf07e167f1c10045f13d607c58))
+
+# [1.0.0-alpha.6](https://github.com/cloudgraphdev/cloudgraph-provider-tencent/compare/1.0.0-alpha.5...1.0.0-alpha.6) (2022-05-31)
+
+
+### Features
+
+* **vpnConnection:** add vpnConnection service ([f2b0072](https://github.com/cloudgraphdev/cloudgraph-provider-tencent/commit/f2b0072e237e787c2bf0d11358003a7a126e15de))
+
+# [1.0.0-alpha.5](https://github.com/cloudgraphdev/cloudgraph-provider-tencent/compare/1.0.0-alpha.4...1.0.0-alpha.5) (2022-05-26)
+
+
+### Features
+
+* **networkAcl:** add networkAcl service ([3665d1e](https://github.com/cloudgraphdev/cloudgraph-provider-tencent/commit/3665d1e14782040d601152a252bd889e64fdef98))
+* **securityGroup:** add security group service ([5be1232](https://github.com/cloudgraphdev/cloudgraph-provider-tencent/commit/5be123281dca7d37e29e91617f03ece3b6a2b07c))
+* **securityGroupRule:** add securityGroupRule service ([c436eb8](https://github.com/cloudgraphdev/cloudgraph-provider-tencent/commit/c436eb8a15269f6738527a415421638f22e95193))
+
+# [1.0.0-alpha.4](https://github.com/cloudgraphdev/cloudgraph-provider-tencent/compare/1.0.0-alpha.3...1.0.0-alpha.4) (2022-05-24)
+
+
+### Features
+
+* **gatewayRoute:** merge alpha ([17d9777](https://github.com/cloudgraphdev/cloudgraph-provider-tencent/commit/17d9777c4a25f9b8ae6ea0799ee67e8a8281c8d7))
+* **vpnGatewayRoute:** add vpnGatewayRoute service ([ba42cbe](https://github.com/cloudgraphdev/cloudgraph-provider-tencent/commit/ba42cbe2c892dd5ebfc826c899445f2c42aefc05))
+* **vpnGatewayRoute:** add vpnGatewayRoute service ([f56783f](https://github.com/cloudgraphdev/cloudgraph-provider-tencent/commit/f56783f3f20b91bfe25af1dd959dd7ba4bccd0e6))
+
 # [1.0.0-alpha.3](https://github.com/cloudgraphdev/cloudgraph-provider-tencent/compare/1.0.0-alpha.2...1.0.0-alpha.3) (2022-05-19)
 
 

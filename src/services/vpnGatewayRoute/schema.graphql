@@ -1,0 +1,11 @@
+type tencentVpnGatewayRoute implements tencentBaseService @key(fields: "id") {
+  destinationCidrBlock: String @search(by: [hash, regexp])
+  instanceType: String @search(by: [hash, regexp])
+  instanceId: String @search(by: [hash, regexp])
+  priority: Int @search
+  status: String @search(by: [hash, regexp])
+  type: String @search(by: [hash, regexp])
+  createTime: String @search(by: [hash, regexp])
+  updateTime: String @search(by: [hash, regexp])
+  vpnGateways: [tencentVpnGateway] @hasInverse(field: vpnGatewayRoutes)
+}

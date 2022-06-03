@@ -1,0 +1,26 @@
+type tencentNetworkAcl implements tencentBaseService @key(fields: "id") {
+  vpcId: String @search(by: [hash, regexp])
+  name: String @search(by: [hash, regexp])
+  createdTime: String @search(by: [hash, regexp])
+  ingressEntries: [tencentNetworkAclEntry]
+  egressEntries: [tencentNetworkAclEntry]
+  subnets: [tencentSubnet] @hasInverse(field: networkAcl)
+  vpcInstance: [tencentVpc] @hasInverse(field: networkAcl)
+}
+
+type tencentNetworkAclEntry
+  @generate(
+    query: { get: false, query: true, aggregate: false }
+    mutation: { add: false, delete: false }
+    subscription: false
+  )
+  @key(fields: "id") {
+  id: String! @id @search(by: [hash, regexp])
+  modifyTime: String @search(by: [hash, regexp])
+  protocol: String @search(by: [hash, regexp])
+  port: String @search(by: [hash, regexp])
+  cidrBlock: String @search(by: [hash, regexp])
+  ipv6CidrBlock: String @search(by: [hash, regexp])
+  action: String @search(by: [hash, regexp])
+  description: String @search(by: [hash, regexp])
+}

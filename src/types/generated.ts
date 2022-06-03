@@ -17,6 +17,24 @@ export type TencentBaseService = {
   region?: Maybe<Scalars['String']>;
 };
 
+export type TencentCamPolicy = TencentBaseService & {
+  addTime?: Maybe<Scalars['String']>;
+  attachEntityBoundaryCount?: Maybe<Scalars['Int']>;
+  attachEntityCount?: Maybe<Scalars['Int']>;
+  attachments?: Maybe<Scalars['Int']>;
+  createMode?: Maybe<Scalars['Int']>;
+  deactived?: Maybe<Scalars['Int']>;
+  deactivedDetail?: Maybe<Array<Maybe<Scalars['String']>>>;
+  description?: Maybe<Scalars['String']>;
+  isAttached?: Maybe<Scalars['Int']>;
+  isServiceLinkedPolicy?: Maybe<Scalars['Int']>;
+  name?: Maybe<Scalars['String']>;
+  policyId?: Maybe<Scalars['Int']>;
+  serviceType?: Maybe<Scalars['String']>;
+  type?: Maybe<Scalars['Int']>;
+  updateTime?: Maybe<Scalars['String']>;
+};
+
 export type TencentCamUser = TencentBaseService & {
   consoleLogin?: Maybe<Scalars['Int']>;
   countryCode?: Maybe<Scalars['String']>;
@@ -67,12 +85,34 @@ export type TencentCustomerGateway = TencentBaseService & {
   ipAddress?: Maybe<Scalars['String']>;
   name?: Maybe<Scalars['String']>;
   tags?: Maybe<Array<Maybe<TencentRawTag>>>;
+  vpnConnections?: Maybe<Array<Maybe<TencentVpnConnection>>>;
 };
 
 export type TencentKeyValue = {
   id: Scalars['String'];
   key: Scalars['String'];
   value?: Maybe<Scalars['String']>;
+};
+
+export type TencentNetworkAcl = TencentBaseService & {
+  createdTime?: Maybe<Scalars['String']>;
+  egressEntries?: Maybe<Array<Maybe<TencentNetworkAclEntry>>>;
+  ingressEntries?: Maybe<Array<Maybe<TencentNetworkAclEntry>>>;
+  name?: Maybe<Scalars['String']>;
+  subnets?: Maybe<Array<Maybe<TencentSubnet>>>;
+  vpcId?: Maybe<Scalars['String']>;
+  vpcInstance?: Maybe<Array<Maybe<TencentVpc>>>;
+};
+
+export type TencentNetworkAclEntry = {
+  action?: Maybe<Scalars['String']>;
+  cidrBlock?: Maybe<Scalars['String']>;
+  description?: Maybe<Scalars['String']>;
+  id: Scalars['String'];
+  ipv6CidrBlock?: Maybe<Scalars['String']>;
+  modifyTime?: Maybe<Scalars['String']>;
+  port?: Maybe<Scalars['String']>;
+  protocol?: Maybe<Scalars['String']>;
 };
 
 export type TencentRawTag = {
@@ -157,6 +197,7 @@ export type TencentSubnet = TencentBaseService & {
   isDefault?: Maybe<Scalars['Boolean']>;
   isRemoteVpcSnat?: Maybe<Scalars['Boolean']>;
   name?: Maybe<Scalars['String']>;
+  networkAcl?: Maybe<Array<Maybe<TencentNetworkAcl>>>;
   networkAclId?: Maybe<Scalars['String']>;
   routeTableId?: Maybe<Scalars['String']>;
   routeTables?: Maybe<Array<Maybe<TencentRouteTable>>>;
@@ -186,6 +227,7 @@ export type TencentVpc = TencentBaseService & {
   ipv6CidrBlock?: Maybe<Scalars['String']>;
   isDefault?: Maybe<Scalars['Boolean']>;
   name?: Maybe<Scalars['String']>;
+  networkAcl?: Maybe<Array<Maybe<TencentNetworkAcl>>>;
   routeTables?: Maybe<Array<Maybe<TencentRouteTable>>>;
   subnets?: Maybe<Array<Maybe<TencentSubnet>>>;
   tags?: Maybe<Array<Maybe<TencentRawTag>>>;
@@ -198,6 +240,56 @@ export type TencentVpcAssistantCidr = {
   id: Scalars['String'];
   subnetSet?: Maybe<Array<Maybe<TencentSubnet>>>;
   vpcId?: Maybe<Scalars['String']>;
+};
+
+export type TencentVpnConnection = TencentBaseService & {
+  createdTime?: Maybe<Scalars['String']>;
+  customerGateways?: Maybe<Array<Maybe<TencentCustomerGateway>>>;
+  enableHealthCheck?: Maybe<Scalars['Boolean']>;
+  encryptProto?: Maybe<Scalars['String']>;
+  healthCheckLocalIp?: Maybe<Scalars['String']>;
+  healthCheckRemoteIp?: Maybe<Scalars['String']>;
+  healthCheckStatus?: Maybe<Scalars['String']>;
+  ikeOptionsSpecification?: Maybe<TencentVpnConnectionIkeOptionsSpecification>;
+  ipsecOptionsSpecification?: Maybe<TencentVpnConnectionIpsecOptionsSpecification>;
+  name?: Maybe<Scalars['String']>;
+  netStatus?: Maybe<Scalars['String']>;
+  preShareKey?: Maybe<Scalars['String']>;
+  routeType?: Maybe<Scalars['String']>;
+  securityPolicyDatabaseSet?: Maybe<Array<Maybe<TencentVpnConnectionSecurityPolicyDatabase>>>;
+  state?: Maybe<Scalars['String']>;
+  vpnGateways?: Maybe<Array<Maybe<TencentVpnGateway>>>;
+  vpnProto?: Maybe<Scalars['String']>;
+};
+
+export type TencentVpnConnectionIkeOptionsSpecification = {
+  dhGroupName?: Maybe<Scalars['String']>;
+  exchangeMode?: Maybe<Scalars['String']>;
+  ikeSaLifetimeSeconds?: Maybe<Scalars['Int']>;
+  ikeVersion?: Maybe<Scalars['String']>;
+  localAddress?: Maybe<Scalars['String']>;
+  localFqdnName?: Maybe<Scalars['String']>;
+  localIdentity?: Maybe<Scalars['String']>;
+  propoAuthenAlgorithm?: Maybe<Scalars['String']>;
+  propoEncryAlgorithm?: Maybe<Scalars['String']>;
+  remoteAddress?: Maybe<Scalars['String']>;
+  remoteFqdnName?: Maybe<Scalars['String']>;
+  remoteIdentity?: Maybe<Scalars['String']>;
+};
+
+export type TencentVpnConnectionIpsecOptionsSpecification = {
+  encryptAlgorithm?: Maybe<Scalars['String']>;
+  integrityAlgorith?: Maybe<Scalars['String']>;
+  ipsecSaLifetimeSeconds?: Maybe<Scalars['Int']>;
+  ipsecSaLifetimeTraffic?: Maybe<Scalars['Int']>;
+  pfsDhGroup?: Maybe<Scalars['String']>;
+};
+
+export type TencentVpnConnectionSecurityPolicyDatabase = {
+  bandwidth?: Maybe<Scalars['Int']>;
+  id: Scalars['String'];
+  localCidrBlock?: Maybe<Scalars['String']>;
+  remoteCidrBlock?: Maybe<Array<Maybe<Scalars['String']>>>;
 };
 
 export type TencentVpnGateway = TencentBaseService & {
@@ -218,7 +310,9 @@ export type TencentVpnGateway = TencentBaseService & {
   type?: Maybe<Scalars['String']>;
   version?: Maybe<Scalars['String']>;
   vpcInstances?: Maybe<Array<Maybe<TencentVpc>>>;
+  vpnConnections?: Maybe<Array<Maybe<TencentVpnConnection>>>;
   vpnGatewayQuotaSet?: Maybe<Array<Maybe<TencentVpnGatewayQuota>>>;
+  vpnGatewayRoutes?: Maybe<Array<Maybe<TencentVpnGatewayRoute>>>;
   zone?: Maybe<Scalars['String']>;
 };
 
@@ -227,4 +321,16 @@ export type TencentVpnGatewayQuota = {
   cname?: Maybe<Scalars['String']>;
   id: Scalars['String'];
   name?: Maybe<Scalars['String']>;
+};
+
+export type TencentVpnGatewayRoute = TencentBaseService & {
+  createTime?: Maybe<Scalars['String']>;
+  destinationCidrBlock?: Maybe<Scalars['String']>;
+  instanceId?: Maybe<Scalars['String']>;
+  instanceType?: Maybe<Scalars['String']>;
+  priority?: Maybe<Scalars['Int']>;
+  status?: Maybe<Scalars['String']>;
+  type?: Maybe<Scalars['String']>;
+  updateTime?: Maybe<Scalars['String']>;
+  vpnGateways?: Maybe<Array<Maybe<TencentVpnGateway>>>;
 };
