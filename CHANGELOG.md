@@ -1,3 +1,14 @@
+# [1.0.0-alpha.8](https://github.com/cloudgraphdev/cloudgraph-provider-tencent/compare/1.0.0-alpha.7...1.0.0-alpha.8) (2022-06-06)
+
+
+### Features
+
+* **camUser:** add camUser service ([fa2c3b8](https://github.com/cloudgraphdev/cloudgraph-provider-tencent/commit/fa2c3b8dbe90781e28291f654734e6ee0b610e39))
+* **camUser:** add camUser service ([caaaaa7](https://github.com/cloudgraphdev/cloudgraph-provider-tencent/commit/caaaaa7e548c146580a0758ed18865d3fc428545))
+* **camUser:** add camUser service add region global ([c6162a6](https://github.com/cloudgraphdev/cloudgraph-provider-tencent/commit/c6162a69296e89aff6730f7fe706d137553a6d5f))
+* **camUser:** fix global region ([feb5add](https://github.com/cloudgraphdev/cloudgraph-provider-tencent/commit/feb5add6bf7010952f3b81101e9a84c881a4af42))
+* **camUser:** merge alpha ([c1ed872](https://github.com/cloudgraphdev/cloudgraph-provider-tencent/commit/c1ed8729c5afef905c0f04cf4ae01b87c1a595ef))
+
 # [1.0.0-alpha.7](https://github.com/cloudgraphdev/cloudgraph-provider-tencent/compare/1.0.0-alpha.6...1.0.0-alpha.7) (2022-06-02)
 
 
