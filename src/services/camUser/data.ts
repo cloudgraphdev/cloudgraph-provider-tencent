@@ -7,7 +7,7 @@ import { SubAccountInfo } from 'tencentcloud-sdk-nodejs/tencentcloud/services/ca
 import loggerText from '../../properties/logger'
 import { TencentServiceInput } from '../../types'
 import { initTestEndpoint, generateTencentErrorLog } from '../../utils'
-import { regionMap } from '../../enums/regions'
+import { GLOBAL_REGION } from '../../config/constants'
 
 const lt = { ...loggerText }
 const { logger } = CloudGraph
@@ -39,7 +39,7 @@ export default async ({
           camUserList.push({
             id: `${instance.Uid}`,
             ...instance,
-            region: regionMap.global,
+            region: GLOBAL_REGION,
           })
         }
       }
