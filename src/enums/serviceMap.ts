@@ -12,6 +12,7 @@ import TencentVpnGateway from '../services/vpnGateway'
 import TencentCamPolicy from '../services/camPolicy'
 import TencentVpnGatewayRoute from '../services/vpnGatewayRoute'
 import TencentCustomerGateway from '../services/customerGateway'
+import TencentCamUser from '../services/camUser'
 import TencentVpnConnection from '../services/vpnConnection'
 
 /**
@@ -20,6 +21,7 @@ import TencentVpnConnection from '../services/vpnConnection'
  */
 export default {
   [services.camPolicy]: TencentCamPolicy,
+  [services.camUser]: TencentCamUser,
   [services.ccn]: TencentCcn,
   [services.ccnAttachment]: TencentCcnAttachment,
   [services.customerGateway]: TencentCustomerGateway,

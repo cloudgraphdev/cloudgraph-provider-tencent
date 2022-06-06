@@ -5,6 +5,7 @@ import services from './services'
  */
 export default {
   [services.camPolicy]: 'tencentCamPolicy',
+  [services.camUser]: 'tencentCamUser',
   [services.ccn]: 'tencentCcn',
   [services.ccnAttachment]: 'tencentCcnAttachment',
   [services.customerGateway]: 'tencentCustomerGateway',

@@ -1,5 +1,6 @@
 export default {
   camPolicy: 'camPolicy',
+  camUser: 'camUser',
   ccn: 'ccn',
   ccnAttachment: 'ccnAttachment',
   customerGateway: 'customerGateway',
