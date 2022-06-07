@@ -14,5 +14,5 @@ export default class TencentCcn extends BaseService implements Service {
 
   getConnections = getConnections.bind(this)
 
-  mutation = getMutation(schemasMap[services.camUser])
+  mutation = getMutation(schemasMap[services.ccn])
 }
