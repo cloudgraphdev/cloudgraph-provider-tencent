@@ -1,3 +1,16 @@
+# [1.0.0-alpha.9](https://github.com/cloudgraphdev/cloudgraph-provider-tencent/compare/1.0.0-alpha.8...1.0.0-alpha.9) (2022-06-07)
+
+
+### Bug Fixes
+
+* **mutation:** use schema names for mutations ([cbe8921](https://github.com/cloudgraphdev/cloudgraph-provider-tencent/commit/cbe8921a7c7c6f9b4dd3a52180c713853dc82ee0))
+* **mutation:** use schema names for mutations ([3bec593](https://github.com/cloudgraphdev/cloudgraph-provider-tencent/commit/3bec59304a84c93176d9125bc7d0e527f88ff458))
+
+
+### Features
+
+* **kubernetesEngine:** add tke service ([ae097a7](https://github.com/cloudgraphdev/cloudgraph-provider-tencent/commit/ae097a7575c19611ede542feadbe381f8e233051))
+
 # [1.0.0-alpha.8](https://github.com/cloudgraphdev/cloudgraph-provider-tencent/compare/1.0.0-alpha.7...1.0.0-alpha.8) (2022-06-06)
 
 
