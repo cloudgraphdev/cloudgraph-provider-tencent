@@ -1,8 +1,10 @@
 import { Service } from '@cloudgraph/sdk';
 import BaseService from '../base';
 import getConnections from './connections';
-import getData, { serviceName } from './data'
+import getData from './data'
 import { getMutation } from '../../utils'
+import services from '../../enums/services'
+import schemasMap from '../../enums/schemasMap'
 
 export default class TencentTag extends BaseService implements Service {
   format = ({service}: {service: any}): any => service
@@ -11,5 +13,5 @@ export default class TencentTag extends BaseService implements Service {
 
   getData = getData.bind(this)
 
-  mutation = getMutation(serviceName)
+  mutation = getMutation(schemasMap[services.tag])
 }

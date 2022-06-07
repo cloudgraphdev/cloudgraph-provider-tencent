@@ -94,6 +94,44 @@ export type TencentKeyValue = {
   value?: Maybe<Scalars['String']>;
 };
 
+export type TencentKubernetesCluster = TencentBaseService & {
+  autoUpgradeClusterLevel?: Maybe<Scalars['Boolean']>;
+  clusterDescription?: Maybe<Scalars['String']>;
+  clusterLevel?: Maybe<Scalars['String']>;
+  clusterMaterNodeNum?: Maybe<Scalars['Int']>;
+  clusterNetworkSettings?: Maybe<TencentKubernetesClusterNetworkSettings>;
+  clusterNodeNum?: Maybe<Scalars['Int']>;
+  clusterOs?: Maybe<Scalars['String']>;
+  clusterStatus?: Maybe<Scalars['String']>;
+  clusterType?: Maybe<Scalars['String']>;
+  clusterVersion?: Maybe<Scalars['String']>;
+  containerRuntime?: Maybe<Scalars['String']>;
+  createdTime?: Maybe<Scalars['String']>;
+  deletionProtection?: Maybe<Scalars['Boolean']>;
+  enableExternalNode?: Maybe<Scalars['Boolean']>;
+  imageId?: Maybe<Scalars['String']>;
+  name?: Maybe<Scalars['String']>;
+  osCustomizeType?: Maybe<Scalars['String']>;
+  projectId?: Maybe<Scalars['Int']>;
+  property?: Maybe<Scalars['String']>;
+  subnets?: Maybe<Array<Maybe<TencentSubnet>>>;
+  tags?: Maybe<Array<Maybe<TencentRawTag>>>;
+  vpcInstances?: Maybe<Array<Maybe<TencentVpc>>>;
+};
+
+export type TencentKubernetesClusterNetworkSettings = {
+  clusterCIDR?: Maybe<Scalars['String']>;
+  cni?: Maybe<Scalars['Boolean']>;
+  ignoreClusterCIDRConflict?: Maybe<Scalars['Boolean']>;
+  ipvs?: Maybe<Scalars['Boolean']>;
+  kubeProxyMode?: Maybe<Scalars['String']>;
+  maxClusterServiceNum?: Maybe<Scalars['Int']>;
+  maxNodePodNum?: Maybe<Scalars['Int']>;
+  serviceCIDR?: Maybe<Scalars['String']>;
+  subnets?: Maybe<Array<Maybe<Scalars['String']>>>;
+  vpcId?: Maybe<Scalars['String']>;
+};
+
 export type TencentNetworkAcl = TencentBaseService & {
   createdTime?: Maybe<Scalars['String']>;
   egressEntries?: Maybe<Array<Maybe<TencentNetworkAclEntry>>>;
@@ -196,6 +234,7 @@ export type TencentSubnet = TencentBaseService & {
   isCdcSubnet?: Maybe<Scalars['Int']>;
   isDefault?: Maybe<Scalars['Boolean']>;
   isRemoteVpcSnat?: Maybe<Scalars['Boolean']>;
+  kubernetesClusters?: Maybe<Array<Maybe<TencentKubernetesCluster>>>;
   name?: Maybe<Scalars['String']>;
   networkAcl?: Maybe<Array<Maybe<TencentNetworkAcl>>>;
   networkAclId?: Maybe<Scalars['String']>;
@@ -226,6 +265,7 @@ export type TencentVpc = TencentBaseService & {
   enableMulticast?: Maybe<Scalars['Boolean']>;
   ipv6CidrBlock?: Maybe<Scalars['String']>;
   isDefault?: Maybe<Scalars['Boolean']>;
+  kubernetesClusters?: Maybe<Array<Maybe<TencentKubernetesCluster>>>;
   name?: Maybe<Scalars['String']>;
   networkAcl?: Maybe<Array<Maybe<TencentNetworkAcl>>>;
   routeTables?: Maybe<Array<Maybe<TencentRouteTable>>>;

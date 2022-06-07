@@ -8,9 +8,11 @@ export default {
   routeTable: 'routeTable',
   securityGroup: 'securityGroup',
   securityGroupRule: 'securityGroupRule',
+  kubernetesEngine: 'kubernetesEngine',
   subnet: 'subnet',
   vpc: 'vpc',
   vpnConnection: 'vpnConnection',
   vpnGateway: 'vpnGateway',
   vpnGatewayRoute: 'vpnGatewayRoute',
+  tag: 'tag'
 }

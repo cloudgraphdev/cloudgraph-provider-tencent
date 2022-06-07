@@ -1,5 +1,5 @@
 import * as tencentcloud from 'tencentcloud-sdk-nodejs'
-import { Subnet } from 'tencentcloud-sdk-nodejs/tencentcloud/services/vpc/v20170312/vpc_models'
+import { Cluster } from 'tencentcloud-sdk-nodejs/tencentcloud/services/tke/v20180525/tke_models'
 import { ClientConfig } from 'tencentcloud-sdk-nodejs/tencentcloud/common/interface'
 import CloudGraph from '@cloudgraph/sdk'
 import groupBy from 'lodash/groupBy'
@@ -10,48 +10,50 @@ import { initTestEndpoint, generateTencentErrorLog } from '../../utils'
 
 const lt = { ...loggerText }
 const { logger } = CloudGraph
-const serviceName = 'Subnet'
+const serviceName = 'KubernetesEngine'
 const apiEndpoint = initTestEndpoint(serviceName)
 
-export interface RawTencentSubnet extends Subnet {
+export interface RawTencentKubernetesEngine extends Cluster {
   id: string
   region: string
+  subnets: string[]
 }
 
 export default async ({
   regions,
   config,
 }: TencentServiceInput): Promise<{
-  [region: string]: RawTencentSubnet[]
+  [region: string]: RawTencentKubernetesEngine[]
 }> =>
   new Promise(async resolve => {
-    const subnetList: RawTencentSubnet[] = []
+    const clusterList: RawTencentKubernetesEngine[] = []
 
     for (const region of regions.split(',')) {
       /**
-       * Get all the subnets
+       * Get all clusters
        */
       try {
-        const VpcClient = tencentcloud.vpc.v20170312.Client
+        const TkeClient = tencentcloud.tke.v20180525.Client
         const clientConfig: ClientConfig  = { credential: config, region, profile: { httpProfile: { endpoint: apiEndpoint } } }
-        const vpc = new VpcClient(clientConfig)
-        const response =  await vpc.DescribeSubnets(null)
+        const tke = new TkeClient(clientConfig)
+        const response = await tke.DescribeClusters(null)
 
-        if (response && !isEmpty(response.SubnetSet)) {
-          for (const instance of response.SubnetSet) {
-            subnetList.push({
-              id: instance.SubnetId,
+        if (response && !isEmpty(response.Clusters)) {
+          for (const instance of response.Clusters) {
+            clusterList.push({
+              id: instance.ClusterId,
               ...instance,
+              subnets: instance.ClusterNetworkSettings?.Subnets?.map(subnet => subnet),
               region,
             })
           }
         }
         
       } catch (error) {
-        generateTencentErrorLog(serviceName, 'vpc:DescribeSubnets', error)
+        generateTencentErrorLog(serviceName, 'tke:DescribeClusters', error)
       }
     }
 
-    logger.debug(lt.foundResources(serviceName, subnetList.length))
-    resolve(groupBy(subnetList, 'region'))
+    logger.debug(lt.foundResources(serviceName, clusterList.length))
+    resolve(groupBy(clusterList, 'region'))
   })

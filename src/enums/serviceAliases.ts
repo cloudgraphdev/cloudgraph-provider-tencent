@@ -5,6 +5,7 @@ export default {
   customerGateway: 'customerGateways',
   routeTable: 'routeTables',
   securityGroup: 'securityGroups',
+  kubernetesEngine: 'kubernetesClusters',
   subnet: 'subnets',
   vpc: 'vpcInstances',
   vpnConnection: 'vpnConnections',

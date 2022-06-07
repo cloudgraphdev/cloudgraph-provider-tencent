@@ -65,8 +65,9 @@ CloudGraph Tencent Provider will ask you what regions you would like to crawl an
 | routeTable | vpc, subnet |
 | securityGroup | | 
 | securityGroupRule | |
-| subnet | networkAcl, vpc, routeTable |
-| vpc | networkAcl, subnet, vpnGateway, routeTable, vpnConnection |
+| subnet | kubernetesEngine, networkAcl, vpc, routeTable |
+| vpc | kubernetesEngine, networkAcl, subnet, vpnGateway, routeTable, vpnConnection |
 | vpnConnection | vpc, vpnGateway, customerGateway |
 | vpnGateway | vpc, vpnGatewayRoute, vpnConnection |
 | vpnGatewayRoute | vpnGateway |
+| kubernetesEngine | subnet, vpc |

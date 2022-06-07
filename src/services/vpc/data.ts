@@ -10,7 +10,7 @@ import { initTestEndpoint, generateTencentErrorLog } from '../../utils'
 
 const lt = { ...loggerText }
 const { logger } = CloudGraph
-export const serviceName = 'Vpc'
+const serviceName = 'Vpc'
 const apiEndpoint = initTestEndpoint(serviceName)
 
 export interface RawTencentVpc extends Vpc {
