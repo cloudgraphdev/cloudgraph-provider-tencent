@@ -1,4 +1,5 @@
 export default {
+  camGroup: 'camGroups',
   camPolicy: 'camPolicies',
   ccn: 'ccns',
   ccnAttachment: 'ccnAttachments',

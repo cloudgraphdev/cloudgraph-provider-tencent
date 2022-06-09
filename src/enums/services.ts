@@ -1,4 +1,5 @@
 export default {
+  camGroup: 'camGroup',
   camPolicy: 'camPolicy',
   camUser: 'camUser',
   ccn: 'ccn',

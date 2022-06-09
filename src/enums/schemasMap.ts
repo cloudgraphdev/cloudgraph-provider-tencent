@@ -4,6 +4,7 @@ import services from './services'
  * schemasMap is an object that contains schemas name by resource
  */
 export default {
+  [services.camGroup]: 'tencentCamGroup',
   [services.camPolicy]: 'tencentCamPolicy',
   [services.camUser]: 'tencentCamUser',
   [services.ccn]: 'tencentCcn',

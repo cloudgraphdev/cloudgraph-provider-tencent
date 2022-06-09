@@ -1,0 +1,5 @@
+type tencentCamGroup implements tencentBaseService @key(fields: "id") {
+  name: String @search(by: [hash, regexp])
+  createTime: String @search(by: [hash, regexp])
+  remark: String @search(by: [hash, regexp])
+}
