@@ -56,6 +56,7 @@ CloudGraph Tencent Provider will ask you what regions you would like to crawl an
 
 | Service | Relations |
 | ------------------- | ------------------- |
+| camGroup | |
 | camPolicy | |
 | camUser | |
 | ccn | ccnAttachment |
