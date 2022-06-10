@@ -1,3 +1,11 @@
+# [1.0.0-alpha.11](https://github.com/cloudgraphdev/cloudgraph-provider-tencent/compare/1.0.0-alpha.10...1.0.0-alpha.11) (2022-06-10)
+
+
+### Features
+
+* **camGroup:** add camGroup service ([3c64503](https://github.com/cloudgraphdev/cloudgraph-provider-tencent/commit/3c645034eb189b0f6eccc59d61412602dcefaf29))
+* **camGroup:** add camGroup service README ([86643b0](https://github.com/cloudgraphdev/cloudgraph-provider-tencent/commit/86643b08cb0e46e035f91b221bf4a80ff85ef08c))
+
 # [1.0.0-alpha.10](https://github.com/cloudgraphdev/cloudgraph-provider-tencent/compare/1.0.0-alpha.9...1.0.0-alpha.10) (2022-06-10)
 
 
