@@ -3,8 +3,6 @@ import { RawTencentCcn } from './data'
 import services from '../../enums/services'
 import aliases from '../../enums/serviceAliases'
 
-const serviceName = 'ccn'
-
 export default ({
   service,
   data,
@@ -16,7 +14,7 @@ export default ({
 }): {
   [property: string]: ServiceConnection[]
 } => {
-  const { id } = service
+  const { id, CcnId } = service
   const connections: ServiceConnection[] = []
 
   const instances: {
@@ -26,12 +24,12 @@ export default ({
 
   if (instances?.data?.[region]) {
     for (const service of instances.data[region]) {
-      if (id === service.CcnId) {
+      if (CcnId === service.CcnId) {
         connections.push({
           id: service.id,
-          resourceType: serviceName,
+          resourceType: services.ccnAttachment,
           relation: 'child',
-          field: aliases[serviceName] ? aliases[serviceName] : serviceName,
+          field: aliases[services.ccnAttachment] ? aliases[services.ccnAttachment] : services.ccnAttachment,
         })
       }
     }

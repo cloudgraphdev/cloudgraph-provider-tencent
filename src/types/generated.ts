@@ -51,10 +51,11 @@ export type TencentCcn = TencentBaseService & {
   bandwidthLimitType?: Maybe<Scalars['String']>;
   ccnAttachments?: Maybe<Array<Maybe<TencentCcnAttachment>>>;
   ccnDescription?: Maybe<Scalars['String']>;
-  ccnName?: Maybe<Scalars['String']>;
+  ccnId?: Maybe<Scalars['String']>;
   createTime?: Maybe<Scalars['String']>;
   instanceChargeType?: Maybe<Scalars['String']>;
   instanceCount?: Maybe<Scalars['Int']>;
+  name?: Maybe<Scalars['String']>;
   qosLevel?: Maybe<Scalars['String']>;
   routePriorityFlag?: Maybe<Scalars['Boolean']>;
   routeTableCount?: Maybe<Scalars['Int']>;

@@ -4,6 +4,7 @@ import CloudGraph from '@cloudgraph/sdk'
 import groupBy from 'lodash/groupBy'
 import isEmpty from 'lodash/isEmpty'
 import { CcnAttachedInstance } from 'tencentcloud-sdk-nodejs/tencentcloud/services/vpc/v20170312/vpc_models'
+import cuid from 'cuid'
 import loggerText from '../../properties/logger'
 import { TencentServiceInput } from '../../types'
 import { initTestEndpoint, generateTencentErrorLog } from '../../utils'
@@ -37,7 +38,7 @@ export default async ({
         if (response && !isEmpty(response.InstanceSet)) {
           for (const instance of response.InstanceSet) {
             ccnAttachmentList.push({
-              id: `${instance.CcnId}-${instance.InstanceId}`,
+              id: cuid(),
               ...instance,
               region,
             })

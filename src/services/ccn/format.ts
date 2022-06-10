@@ -11,7 +11,8 @@ export default ({
 }): TencentCcn => {
   const {
     id,
-    CcnName: ccnName,
+    CcnId: ccnId,
+    CcnName: name,
     CcnDescription: ccnDescription,
     InstanceCount: instanceCount,
     CreateTime: createTime,
@@ -28,7 +29,8 @@ export default ({
   return {
     id,
     region,
-    ccnName,
+    ccnId,
+    name,
     ccnDescription,
     instanceCount,
     createTime,
