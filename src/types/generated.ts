@@ -17,6 +17,12 @@ export type TencentBaseService = {
   region?: Maybe<Scalars['String']>;
 };
 
+export type TencentCamGroup = TencentBaseService & {
+  createTime?: Maybe<Scalars['String']>;
+  name?: Maybe<Scalars['String']>;
+  remark?: Maybe<Scalars['String']>;
+};
+
 export type TencentCamPolicy = TencentBaseService & {
   addTime?: Maybe<Scalars['String']>;
   attachEntityBoundaryCount?: Maybe<Scalars['Int']>;
