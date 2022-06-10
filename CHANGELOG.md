@@ -1,3 +1,10 @@
+# [1.0.0-alpha.10](https://github.com/cloudgraphdev/cloudgraph-provider-tencent/compare/1.0.0-alpha.9...1.0.0-alpha.10) (2022-06-10)
+
+
+### Bug Fixes
+
+* **ccn:** fix ccn and ccnAttachment ([384db27](https://github.com/cloudgraphdev/cloudgraph-provider-tencent/commit/384db271bb2b6d06ec2ab9bab6acf8d6b066effc))
+
 # [1.0.0-alpha.9](https://github.com/cloudgraphdev/cloudgraph-provider-tencent/compare/1.0.0-alpha.8...1.0.0-alpha.9) (2022-06-07)
 
 
