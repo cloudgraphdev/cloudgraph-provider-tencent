@@ -1,0 +1,11 @@
+type tencentCamUser implements tencentBaseService @key(fields: "id") {
+  uin: String @search(by: [hash, regexp])
+  name: String @search(by: [hash, regexp])
+  remark: String @search(by: [hash, regexp])
+  consoleLogin: Int @search
+  phoneNum: String @search(by: [hash, regexp])
+  countryCode: String @search(by: [hash, regexp])
+  email: String @search(by: [hash, regexp])
+  createTime: String @search(by: [hash, regexp])
+  nickName: String @search(by: [hash, regexp])
+}

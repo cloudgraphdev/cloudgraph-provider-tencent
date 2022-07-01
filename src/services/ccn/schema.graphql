@@ -1,0 +1,16 @@
+type tencentCcn implements tencentBaseService @key(fields: "id") {
+  ccnId: String @search(by: [hash, regexp])
+  name: String @search(by: [hash, regexp])
+  ccnDescription: String @search(by: [hash, regexp])
+  instanceCount: Int @search
+  createTime: String @search(by: [hash, regexp])
+  state: String @search(by: [hash, regexp])
+  qosLevel: String @search(by: [hash, regexp])
+  instanceChargeType: String @search(by: [hash, regexp])
+  bandwidthLimitType: String @search(by: [hash, regexp])
+  tags: [tencentRawTag]
+  routePriorityFlag: Boolean @search
+  routeTableCount: Int @search
+  routeTableFlag: Boolean @search
+  ccnAttachments: [tencentCcnAttachment] @hasInverse(field: ccns)
+}

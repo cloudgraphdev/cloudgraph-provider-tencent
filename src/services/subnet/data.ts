@@ -10,7 +10,7 @@ import { initTestEndpoint, generateTencentErrorLog } from '../../utils'
 
 const lt = { ...loggerText }
 const { logger } = CloudGraph
-export const serviceName = 'Subnet'
+const serviceName = 'Subnet'
 const apiEndpoint = initTestEndpoint(serviceName)
 
 export interface RawTencentSubnet extends Subnet {
