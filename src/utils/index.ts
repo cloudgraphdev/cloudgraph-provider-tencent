@@ -23,8 +23,8 @@ export function generateTencentErrorLog(
 
 export function getMutation(serviceName: string) {
   return `
-    mutation($input: [Addtencent${serviceName}Input!]!) {
-      addtencent${serviceName}(input: $input, upsert: true) {
+    mutation($input: [Add${serviceName}Input!]!) {
+      add${serviceName}(input: $input, upsert: true) {
         numUids
       }
     }

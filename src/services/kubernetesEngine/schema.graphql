@@ -1,0 +1,42 @@
+type tencentKubernetesCluster implements tencentBaseService @key(fields: "id") {
+  name: String @search(by: [hash, regexp])
+  clusterDescription: String @search(by: [hash, regexp])
+  clusterVersion: String @search(by: [hash, regexp])
+  clusterOs: String @search(by: [hash, regexp])
+  clusterType: String @search(by: [hash, regexp])
+  clusterNetworkSettings: tencentKubernetesClusterNetworkSettings
+  clusterNodeNum: Int @search
+  projectId: Int @search
+  tags: [tencentRawTag]
+  clusterStatus: String @search(by: [hash, regexp])
+  property: String @search(by: [hash, regexp])
+  clusterMaterNodeNum: Int @search
+  imageId: String @search(by: [hash, regexp])
+  osCustomizeType: String @search(by: [hash, regexp])
+  containerRuntime: String @search(by: [hash, regexp])
+  createdTime: String @search(by: [hash, regexp])
+  deletionProtection: Boolean @search
+  enableExternalNode: Boolean @search
+  clusterLevel: String @search(by: [hash, regexp])
+  autoUpgradeClusterLevel: Boolean @search
+  subnets: [tencentSubnet] @hasInverse(field: kubernetesClusters)
+  vpcInstances: [tencentVpc] @hasInverse(field: kubernetesClusters)
+}
+
+type tencentKubernetesClusterNetworkSettings
+  @generate(
+    query: { get: false, query: true, aggregate: false }
+    mutation: { add: false, delete: false }
+    subscription: false
+  ) {
+  clusterCIDR: String @search(by: [hash, regexp])
+  ignoreClusterCIDRConflict: Boolean @search
+  maxNodePodNum: Int @search
+  maxClusterServiceNum: Int @search
+  ipvs: Boolean @search
+  vpcId: String @search(by: [hash, regexp])
+  cni: Boolean @search
+  kubeProxyMode: String @search(by: [hash, regexp])
+  serviceCIDR: String @search(by: [hash, regexp])
+  subnets: [String] @search(by: [hash, regexp])
+}
